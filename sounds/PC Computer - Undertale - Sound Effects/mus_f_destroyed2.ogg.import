@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c10rnq27wb5nv"
+path="res://.godot/imported/mus_f_destroyed2.ogg-b063a819473ecba2a9aa77754c2a0fab.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_f_destroyed2.ogg"
+dest_files=["res://.godot/imported/mus_f_destroyed2.ogg-b063a819473ecba2a9aa77754c2a0fab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

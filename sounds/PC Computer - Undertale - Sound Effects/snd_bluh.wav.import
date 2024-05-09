@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dtsn7frmfhl5v"
+path="res://.godot/imported/snd_bluh.wav-681c6eca60a83ceeffce471f732615de.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/snd_bluh.wav"
+dest_files=["res://.godot/imported/snd_bluh.wav-681c6eca60a83ceeffce471f732615de.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

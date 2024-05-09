@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8r5ukdq5irw7"
+path="res://.godot/imported/mus_churchbell.ogg-294c9dfb691b1eb7bf14e30fe6009900.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_churchbell.ogg"
+dest_files=["res://.godot/imported/mus_churchbell.ogg-294c9dfb691b1eb7bf14e30fe6009900.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

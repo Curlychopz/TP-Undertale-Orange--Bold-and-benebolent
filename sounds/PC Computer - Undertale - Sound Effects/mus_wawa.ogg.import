@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cs551nvy3jrk6"
+path="res://.godot/imported/mus_wawa.ogg-3546101a88eb335c6320a59f89cecd7b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_wawa.ogg"
+dest_files=["res://.godot/imported/mus_wawa.ogg-3546101a88eb335c6320a59f89cecd7b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

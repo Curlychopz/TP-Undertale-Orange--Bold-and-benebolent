@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4tuclatate4a"
+path="res://.godot/imported/snd_mtt2.wav-b490b910b81d66c6fb88a1b406e33ad0.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/snd_mtt2.wav"
+dest_files=["res://.godot/imported/snd_mtt2.wav-b490b910b81d66c6fb88a1b406e33ad0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dvcvmth3p0m5r"
+path="res://.godot/imported/mus_sfx_cinematiccut.wav-455d235a3e1cc6f607d5291eb64c80fd.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_sfx_cinematiccut.wav"
+dest_files=["res://.godot/imported/mus_sfx_cinematiccut.wav-455d235a3e1cc6f607d5291eb64c80fd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

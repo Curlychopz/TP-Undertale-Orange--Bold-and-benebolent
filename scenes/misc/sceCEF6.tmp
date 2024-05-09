@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://56vcj874kl3i"]
+
+[ext_resource type="Script" path="res://scenes/misc/scene_switcher.gd" id="1_cyt00"]
+[ext_resource type="PackedScene" uid="uid://dwqyuwfo6ft5f" path="res://scenes/ruins/area_1.tscn" id="1_lemil"]
+[ext_resource type="PackedScene" uid="uid://ctb4a361ttlx8" path="res://scenes/logo/logo.tscn" id="2_cgw7h"]
+[ext_resource type="PackedScene" uid="uid://oef8hkpawufh" path="res://scenes/ruins/area_2.tscn" id="2_ot267"]
+[ext_resource type="PackedScene" uid="uid://dqx4woqoh6sew" path="res://scenes/ruins/area_3.tscn" id="3_7nbcj"]
+
+[node name="scene_switcher" type="Node"]
+script = ExtResource("1_cyt00")
+
+[node name="logo" parent="." instance=ExtResource("2_cgw7h")]
+
+[node name="area1" parent="." instance=ExtResource("1_lemil")]
+visible = false
+
+[node name="Intro1" parent="." instance=ExtResource("2_ot267")]
+visible = false
+
+[node name="RuinsRoom3" parent="." instance=ExtResource("3_7nbcj")]
+visible = false

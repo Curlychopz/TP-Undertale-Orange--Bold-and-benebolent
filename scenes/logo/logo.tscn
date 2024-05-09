@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctb4a361ttlx8"]
+
+[ext_resource type="Script" path="res://scripts/logo/logo.gd" id="1_guk3a"]
+[ext_resource type="Texture2D" uid="uid://dkt56lf1q4lqi" path="res://sprites/logo/spr_logo0.png" id="2_h82ee"]
+[ext_resource type="Texture2D" uid="uid://cgnl6qmkvuu5g" path="res://sprites/logo/spr_logo1.png" id="3_x054p"]
+[ext_resource type="Texture2D" uid="uid://rkarlbm4r7yk" path="res://sprites/logo/spr_logo2.png" id="4_or2to"]
+[ext_resource type="Texture2D" uid="uid://3yb2b0ufd6h6" path="res://sprites/logo/UT_PAPAYA_ORANGE_HUMBLE_LOGO.png" id="4_y4csw"]
+[ext_resource type="Texture2D" uid="uid://wtlaajdnfesb" path="res://sprites/logo/spr_logo3.png" id="5_fa2jw"]
+[ext_resource type="AudioStream" uid="uid://du1h45smxuk84" path="res://sounds/logo/snd_intro.ogg" id="6_fwafa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ryi02"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h82ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x054p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y4csw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y4csw")
+}],
+"loop": true,
+"name": &"April",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h82ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x054p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_or2to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fa2jw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="logo" type="Node2D"]
+script = ExtResource("1_guk3a")
+level_name = "Logo"
+
+[node name="logo-timer" type="Timer" parent="."]
+
+[node name="logo-sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 120)
+sprite_frames = SubResource("SpriteFrames_ryi02")
+animation = &"April"
+
+[node name="logo-sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_fwafa")

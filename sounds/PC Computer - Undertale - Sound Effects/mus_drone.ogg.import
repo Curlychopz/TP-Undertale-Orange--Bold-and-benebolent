@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dkckegc5qoa3q"
+path="res://.godot/imported/mus_drone.ogg-05d4a739ff0514bb8045bb2af75343f1.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_drone.ogg"
+dest_files=["res://.godot/imported/mus_drone.ogg-05d4a739ff0514bb8045bb2af75343f1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

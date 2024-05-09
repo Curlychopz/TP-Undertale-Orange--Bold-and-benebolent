@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3rd2dtdtwohw"
+path="res://.godot/imported/mus_cymbal.ogg-da1a17131bd42a520ac3952d9ad625ff.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_cymbal.ogg"
+dest_files=["res://.godot/imported/mus_cymbal.ogg-da1a17131bd42a520ac3952d9ad625ff.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

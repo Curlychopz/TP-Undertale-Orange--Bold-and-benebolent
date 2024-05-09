@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5yi4jwxmynrh"]
+
+[ext_resource type="Script" path="res://scripts/systems/dialouge/Dialouge_data.gd" id="1_lsq4q"]
+
+[node name="Dialouge_pack" type="Node2D"]
+
+[node name="dlg_1" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[color=red]woah its red[/color][color=blue] and now its blue[/color]!"
+
+[node name="dlg_2" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "hi my name is dialogue "
+
+[node name="dlg_3" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "You can also scroll text"
+
+[node name="dlg_4" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "You can read messages in me and I wrap"
+
+[node name="dlg_6" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[fade start=4 length=23] oh boy im dissapearing [/fade]."
+
+[node name="dlg_12" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[pulse] ow my head is dizzy.... [/pulse]"
+
+[node name="dlg_10" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[wave] woah im swimming!!!! [/wave]"
+
+[node name="dlg_9" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[shake] aaaah im so scared!!!! >.< [/shake]"
+
+[node name="dlg_7" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[rainbow] im so high rn [/rainbow]"
+
+[node name="dlg_8" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[tornado] woah im so dizzy.... [/tornado]"
+
+[node name="dlg_11" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "[shake level=35] aaaaaah get away from me!!!!! [/shake]"
+
+[node name="dlg_5" type="Node" parent="."]
+script = ExtResource("1_lsq4q")
+text = "anyways end of dialouge bye!"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ofu8bv28fwak"
+path="res://.godot/imported/mus_f_newlaugh_low.ogg-47f1c2fb7388c7c2aaf6008fabbd492c.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_f_newlaugh_low.ogg"
+dest_files=["res://.godot/imported/mus_f_newlaugh_low.ogg-47f1c2fb7388c7c2aaf6008fabbd492c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

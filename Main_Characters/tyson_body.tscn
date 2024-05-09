@@ -1,0 +1,105 @@
+[gd_scene load_steps=16 format=3 uid="uid://cdgml71f1mhl6"]
+
+[ext_resource type="Script" path="res://scripts/ruins/tyson-body.gd" id="1_hviyl"]
+[ext_resource type="Texture2D" uid="uid://crcgqnqlgxjxn" path="res://sprites/tyson/NewNewTyson1.png" id="2_umnyi"]
+[ext_resource type="Texture2D" uid="uid://c6luog60y8sgc" path="res://sprites/tyson/NewNewTyson2.png" id="3_vb7v4"]
+[ext_resource type="Texture2D" uid="uid://bn24dmti4mkew" path="res://sprites/tyson/NewNewTyson3.png" id="4_0p5x7"]
+[ext_resource type="Texture2D" uid="uid://dmaym0qxxfjgy" path="res://sprites/tyson/NewNewTyson4.png" id="5_viobc"]
+[ext_resource type="Texture2D" uid="uid://dndaffm0ylq6b" path="res://sprites/tyson/NewNewTyson5.png" id="6_y04ud"]
+[ext_resource type="Texture2D" uid="uid://ci53g2mwv5uaa" path="res://sprites/tyson/NewNewTyson6.png" id="7_qcybi"]
+[ext_resource type="Texture2D" uid="uid://dmdpimwwt1nhj" path="res://sprites/tyson/NewNewTyson7.png" id="8_cgd26"]
+[ext_resource type="Texture2D" uid="uid://dku0vwb57tfx7" path="res://sprites/tyson/NewNewTyson8.png" id="9_r0db6"]
+[ext_resource type="Texture2D" uid="uid://dm6f3hcuy2vog" path="res://sprites/tyson/NewNewTyson9.png" id="10_w0su8"]
+[ext_resource type="Texture2D" uid="uid://3ee0roahysw6" path="res://sprites/tyson/NewNewTyson10.png" id="11_gcqr5"]
+[ext_resource type="Texture2D" uid="uid://bbr10docf3by3" path="res://sprites/tyson/NewNewTyson11.png" id="12_72yvy"]
+[ext_resource type="Texture2D" uid="uid://bohjw0l3ejur6" path="res://sprites/tyson/NewNewTyson12.png" id="13_d5r4o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bwgsl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_umnyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vb7v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0p5x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_viobc")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_y04ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qcybi")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cgd26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_r0db6")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_w0su8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gcqr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_72yvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_d5r4o")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nphk1"]
+size = Vector2(19, 12.5)
+
+[node name="tyson-body" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_hviyl")
+
+[node name="tyson-sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bwgsl")
+animation = &"down"
+
+[node name="tyson-collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9.25)
+shape = SubResource("RectangleShape2D_nphk1")
+debug_color = Color(0.694118, 0.486275, 0.231373, 0.419608)
+
+[node name="tyson_timer" type="Timer" parent="."]
+wait_time = 26.897
+
+[node name="TysonView" type="Camera2D" parent="."]
+visible = false
+limit_left = 0
+limit_top = 0
+limit_right = 680
+limit_bottom = 260
+limit_smoothed = true
+
+[node name="cutscene_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="tyson_timer" to="." method="_on_tyson_timer_timeout"]

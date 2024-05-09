@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crugf1u1mitx3"
+path="res://.godot/imported/mus_sfx_chainsaw.ogg-6ad61b409e27c19e6a7fc5da4b224654.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_sfx_chainsaw.ogg"
+dest_files=["res://.godot/imported/mus_sfx_chainsaw.ogg-6ad61b409e27c19e6a7fc5da4b224654.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

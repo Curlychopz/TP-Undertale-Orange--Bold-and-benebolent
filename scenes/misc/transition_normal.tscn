@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bay7v1fmt8sx4"]
+
+[ext_resource type="Script" path="res://scenes/misc/transition_normal.gd" id="1_aqjhq"]
+[ext_resource type="PackedScene" uid="uid://mu5kgrba01d8" path="res://Main_Characters/trans_anim.tscn" id="2_yhwer"]
+
+[node name="transition_room" type="Node2D"]
+visible = false
+script = ExtResource("1_aqjhq")
+
+[node name="trans_anim" parent="." instance=ExtResource("2_yhwer")]
+
+[connection signal="animate_trans" from="." to="trans_anim" method="_on_transition_room_animate_trans"]
+[connection signal="animation_finished" from="trans_anim" to="." method="_on_trans_anim_animation_finished"]
+[connection signal="change_scene" from="trans_anim" to="." method="_on_trans_anim_change_scene"]

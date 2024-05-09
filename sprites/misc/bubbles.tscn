@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8dh0rgculdgq"]
+
+[ext_resource type="Texture2D" uid="uid://bagd8q4brmo1l" path="res://sprites/misc/81451.png" id="1_442b3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6eot"]
+atlas = ExtResource("1_442b3")
+region = Rect2(108, 1, 12, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2owlw"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"song",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6eot")
+}],
+"loop": true,
+"name": &"surprise",
+"speed": 5.0
+}]
+
+[node name="bubbles" type="AnimatedSprite2D"]
+visible = false
+sprite_frames = SubResource("SpriteFrames_2owlw")
+animation = &"song"

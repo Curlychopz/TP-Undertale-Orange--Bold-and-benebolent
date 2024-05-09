@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://ud7jli5oubir"]
+
+[ext_resource type="Script" path="res://dialouge/dialouge_ui.gd" id="1_pmulp"]
+[ext_resource type="Texture2D" uid="uid://4p6x8v1k0006" path="res://sprites/misc/dialouge_box.png" id="1_rn0ds"]
+[ext_resource type="FontFile" uid="uid://cbf05i7kdtb64" path="res://sprites/8bitoperator-tfx.ttf" id="2_1e21f"]
+
+[sub_resource type="FontVariation" id="FontVariation_7uw6d"]
+base_font = ExtResource("2_1e21f")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_pmulp")
+
+[node name="node" type="Node2D" parent="."]
+position = Vector2(148, 190)
+
+[node name="rect" type="NinePatchRect" parent="node"]
+offset_left = -136.0
+offset_top = -41.0
+offset_right = 166.0
+offset_bottom = 48.0
+texture = ExtResource("1_rn0ds")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="text" type="RichTextLabel" parent="node/rect"]
+clip_contents = false
+layout_mode = 0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 282.0
+offset_bottom = 67.0
+theme_override_fonts/normal_font = SubResource("FontVariation_7uw6d")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[color=red]woah its red[/color][color=blue] and now its blue[/color]!"
+scroll_active = false
+autowrap_mode = 1
+shortcut_keys_enabled = false

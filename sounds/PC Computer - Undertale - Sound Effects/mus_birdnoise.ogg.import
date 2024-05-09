@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://brsga083i8o41"
+path="res://.godot/imported/mus_birdnoise.ogg-f6c7dc9d6f07ac3a2b2eee230809c8ee.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_birdnoise.ogg"
+dest_files=["res://.godot/imported/mus_birdnoise.ogg-f6c7dc9d6f07ac3a2b2eee230809c8ee.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

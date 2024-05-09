@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d00xjrl5c26ru"
+path="res://.godot/imported/mus_dialup_1.wav-089be8e5fe9f04c63e2d07bf92a95252.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_dialup_1.wav"
+dest_files=["res://.godot/imported/mus_dialup_1.wav-089be8e5fe9f04c63e2d07bf92a95252.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

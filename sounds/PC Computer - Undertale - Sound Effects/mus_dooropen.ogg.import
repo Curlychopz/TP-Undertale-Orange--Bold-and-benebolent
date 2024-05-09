@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://yxocc66vivgt"
+path="res://.godot/imported/mus_dooropen.ogg-1045e9a4ef2ac7ce631011e7a7703040.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_dooropen.ogg"
+dest_files=["res://.godot/imported/mus_dooropen.ogg-1045e9a4ef2ac7ce631011e7a7703040.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

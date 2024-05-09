@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btyv7w0h55s5a"
+path="res://.godot/imported/mus_sfx_hypergoner_laugh.ogg-dbee5f3d7ac1be5c2da733754fc3c3a8.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_sfx_hypergoner_laugh.ogg"
+dest_files=["res://.godot/imported/mus_sfx_hypergoner_laugh.ogg-dbee5f3d7ac1be5c2da733754fc3c3a8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

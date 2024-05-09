@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxw5nh12v87wn"
+path="res://.godot/imported/snd_spearrise.wav-d446cc96d2cf7c9b383b0b33eef296bf.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/snd_spearrise.wav"
+dest_files=["res://.godot/imported/snd_spearrise.wav-d446cc96d2cf7c9b383b0b33eef296bf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

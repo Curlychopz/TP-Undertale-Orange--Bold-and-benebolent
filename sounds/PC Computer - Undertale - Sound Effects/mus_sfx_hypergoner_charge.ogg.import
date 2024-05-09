@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dupy6emn23jnn"
+path="res://.godot/imported/mus_sfx_hypergoner_charge.ogg-c0a0bebd549923998911f6aad9f5108c.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_sfx_hypergoner_charge.ogg"
+dest_files=["res://.godot/imported/mus_sfx_hypergoner_charge.ogg-c0a0bebd549923998911f6aad9f5108c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

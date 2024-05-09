@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5754ob0s30r3"
+path="res://.godot/imported/snd_dimbox.wav-1bef97258784158875cc7c0dcfc9ea98.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/snd_dimbox.wav"
+dest_files=["res://.godot/imported/snd_dimbox.wav-1bef97258784158875cc7c0dcfc9ea98.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvicxbm24p0x6"
+path="res://.godot/imported/mus_sticksnap.ogg-a64f4b876fff74018fc96f5257d591ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_sticksnap.ogg"
+dest_files=["res://.godot/imported/mus_sticksnap.ogg-a64f4b876fff74018fc96f5257d591ac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

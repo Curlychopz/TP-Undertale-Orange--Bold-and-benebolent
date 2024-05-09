@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcwmv0kg1cvfn"
+path="res://.godot/imported/mus_sfx_rainbowbeam_hold.ogg-7c35578c616b9ebf0a31ba5c72c2c9e3.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_sfx_rainbowbeam_hold.ogg"
+dest_files=["res://.godot/imported/mus_sfx_rainbowbeam_hold.ogg-7c35578c616b9ebf0a31ba5c72c2c9e3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

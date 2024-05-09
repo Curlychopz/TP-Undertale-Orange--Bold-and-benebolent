@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dww4booq5je0e"
+path="res://.godot/imported/snd_curtgunshot.ogg-e206dd6c1d9a283edfd590264f93bf07.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/snd_curtgunshot.ogg"
+dest_files=["res://.godot/imported/snd_curtgunshot.ogg-e206dd6c1d9a283edfd590264f93bf07.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,95 @@
+[gd_scene load_steps=19 format=3 uid="uid://b65tjdy5e2ri8"]
+
+[ext_resource type="Script" path="res://scripts/menu_begin/menu-begin.gd" id="1_jmc40"]
+[ext_resource type="Texture2D" uid="uid://m6dluyydja2x" path="res://sprites/menu_begin/instructions_shake_notdone1.png" id="2_yo2sq"]
+[ext_resource type="Texture2D" uid="uid://deao8f458ug72" path="res://sprites/menu_begin/instructions_shake_notdone2.png" id="3_4e8j7"]
+[ext_resource type="Texture2D" uid="uid://ci2mathlbsk25" path="res://sprites/menu_begin/instructions_shake_notdone3.png" id="4_pespa"]
+[ext_resource type="Texture2D" uid="uid://hiw64sdfu8gq" path="res://sprites/menu_begin/instructions_shake_notdone4.png" id="5_74hpa"]
+[ext_resource type="Texture2D" uid="uid://7kmcmmokkvp4" path="res://sprites/menu_begin/instructions_shake_notdone5.png" id="6_unarw"]
+[ext_resource type="Texture2D" uid="uid://d31ljh7lfhrrd" path="res://sprites/fadeout/fadeout1.png" id="7_nf4ps"]
+[ext_resource type="Texture2D" uid="uid://bmuafqgxmg4q2" path="res://sprites/fadeout/fadeout2.png" id="8_2ie0w"]
+[ext_resource type="Texture2D" uid="uid://34xwxjvhk14l" path="res://sprites/fadeout/fadeout3.png" id="9_acjg1"]
+[ext_resource type="Texture2D" uid="uid://bcmnj1y6aqxqc" path="res://sprites/fadeout/fadeout4.png" id="10_rrmwg"]
+[ext_resource type="Texture2D" uid="uid://b3bfmahmkclas" path="res://sprites/fadeout/fadeout5.png" id="11_msgsj"]
+[ext_resource type="Texture2D" uid="uid://cecvca75aj87v" path="res://sprites/fadeout/fadeout6.png" id="12_rf4pk"]
+[ext_resource type="Texture2D" uid="uid://conqujifgseox" path="res://sprites/fadeout/fadeout7.png" id="13_yfjlw"]
+[ext_resource type="Texture2D" uid="uid://b7ba7tvid8xw" path="res://sprites/fadeout/fadeout8.png" id="14_cqqa5"]
+[ext_resource type="AudioStream" uid="uid://cmfqdqwm5dags" path="res://music/menu/menu1.wav" id="15_qcvu2"]
+[ext_resource type="AudioStream" uid="uid://exhjsre5gh8n" path="res://sounds/fadeout/fadeout.wav" id="16_5umnb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_toxmv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yo2sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4e8j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pespa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_74hpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_unarw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oaogs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_nf4ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ie0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_acjg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rrmwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_msgsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rf4pk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yfjlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cqqa5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="menu-begin" type="Node2D"]
+script = ExtResource("1_jmc40")
+
+[node name="menu-sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(160, 120)
+sprite_frames = SubResource("SpriteFrames_toxmv")
+frame = 1
+frame_progress = 0.259511
+
+[node name="fadeout-sprite" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(160, 120)
+scale = Vector2(20, 15)
+sprite_frames = SubResource("SpriteFrames_oaogs")
+speed_scale = 0.28
+
+[node name="menu-music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_qcvu2")
+
+[node name="fadeout-sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_5umnb")

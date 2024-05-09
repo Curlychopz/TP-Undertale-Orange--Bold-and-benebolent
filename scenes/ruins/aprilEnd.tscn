@@ -1,0 +1,135 @@
+[gd_scene load_steps=14 format=3 uid="uid://ddttfjypigama"]
+
+[ext_resource type="Texture2D" uid="uid://hygc758k434f" path="res://music/Ruins/spr_logo2.png" id="1_m3a53"]
+[ext_resource type="AudioStream" uid="uid://dklrtr6ubtjax" path="res://music/menu/Bold_and_Benevolent_Perfected.mp3" id="2_1hqa0"]
+[ext_resource type="Script" path="res://scenes/ruins/BnBPerf.gd" id="3_h2nvd"]
+[ext_resource type="Texture2D" uid="uid://db8as36f1o0o" path="res://sprites/coral/UT_PAPAYA_ORANGE_CORAL_sheet.png" id="4_omfiw"]
+[ext_resource type="Texture2D" uid="uid://nmbjy8npeum8" path="res://sprites/april2024/Screenshot_20240318_221700.jpg" id="5_56cnr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qufo1"]
+atlas = ExtResource("4_omfiw")
+region = Rect2(5, 6, 20, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6koaa"]
+atlas = ExtResource("4_omfiw")
+region = Rect2(5, 40, 20, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh0tr"]
+atlas = ExtResource("4_omfiw")
+region = Rect2(5, 74, 20, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyuqq"]
+atlas = ExtResource("4_omfiw")
+region = Rect2(51, 40, 20, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tofa8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qufo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6koaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh0tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyuqq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_lhqvq"]
+resource_name = "Coral spin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CoralSpin:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CoralSpin:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_r27kr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CoralSpin:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CoralSpin:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hbcc4"]
+_data = {
+"Coral spin": SubResource("Animation_lhqvq"),
+"RESET": SubResource("Animation_r27kr")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 638.0
+offset_bottom = 477.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_right = 322.0
+offset_bottom = 254.0
+texture = ExtResource("1_m3a53")
+
+[node name="BnBPerf" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_1hqa0")
+script = ExtResource("3_h2nvd")
+
+[node name="CoralSpin" type="AnimatedSprite2D" parent="."]
+position = Vector2(221, 172)
+sprite_frames = SubResource("SpriteFrames_tofa8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hbcc4")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(63, 199)
+scale = Vector2(0.0463032, 0.0509501)
+texture = ExtResource("5_56cnr")

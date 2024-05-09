@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://r0cjs4gafjkk"
+path="res://.godot/imported/mus_disturbing.ogg-8136dd5aeb6fbc22cc61648b999de214.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/mus_disturbing.ogg"
+dest_files=["res://.godot/imported/mus_disturbing.ogg-8136dd5aeb6fbc22cc61648b999de214.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

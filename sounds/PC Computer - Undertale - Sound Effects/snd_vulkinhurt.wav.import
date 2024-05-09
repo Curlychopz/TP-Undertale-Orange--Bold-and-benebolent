@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://br1ag10l8sf2j"
+path="res://.godot/imported/snd_vulkinhurt.wav-17dc5bde4e47290e8e4dd0216e4a4c16.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/snd_vulkinhurt.wav"
+dest_files=["res://.godot/imported/snd_vulkinhurt.wav-17dc5bde4e47290e8e4dd0216e4a4c16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
