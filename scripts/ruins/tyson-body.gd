@@ -69,8 +69,11 @@ func trans_representation(room):
 func _ready():
 	trans.play("blank")
 	trans.stop
+	
 
 func _process(_delta):
+	interaction_system()
+	
 	if test_toggle > 1:
 		test_toggle = 0
 	
@@ -78,6 +81,7 @@ func _process(_delta):
 		trans.play("blank")
 		trans.stop
 
+	$TysonView.offset = Vector2(randi_range(-Globals.shake, Globals.shake), randi_range(-Globals.shake, Globals.shake))
 	
 	if Input.is_action_pressed("testTog"):
 	#	test_toggle = test_toggle + 1
@@ -285,6 +289,20 @@ func _on_ruins_a_3_to_a_4_body_shape_entered(body_rid, body, body_shape_index, l
 		)
 		timer.start()
 
+var closest_interactable = null
+var interactable_distance = 0
+var interactables = []
+func interaction_system():
+	if Input.is_action_just_pressed("accept"):
+		interactables = get_tree().get_nodes_in_group("interact")
+		interactable_distance = INF
+		for i in interactables:
+			if global_position.distance_squared_to(i.global_position) < interactable_distance:
+				interactable_distance = global_position.distance_squared_to(i.global_position)
+				closest_interactable = i
+				
+		closest_interactable.interact()
+				
 
 func _on_ruins_a_4_to_a_5_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if Input.is_action_pressed("up") and global.tyson_input == true:

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://s8f6jlo3w1t"]
+
+[ext_resource type="Script" path="res://scenes/misc/interactable.gd" id="1_o4a7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wws5r"]
+
+[node name="interactable" type="StaticBody2D" groups=["interact"]]
+script = ExtResource("1_o4a7h")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wws5r")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_top = -14.0
+offset_right = 20.0
+offset_bottom = 6.0
+rotation = 0.785398
+color = Color(1, 0.478431, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0

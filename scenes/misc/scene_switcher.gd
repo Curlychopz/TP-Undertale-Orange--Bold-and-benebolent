@@ -15,7 +15,7 @@ var current_room = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$logo.connect("level_changed", self, "handle_level_changed")
-	pass
+	get_window().mode = Window.MODE_FULLSCREEN
 
 func handle_level_changed(current_level_name):
 	pass

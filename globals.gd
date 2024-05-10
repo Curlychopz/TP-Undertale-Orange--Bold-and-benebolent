@@ -10,6 +10,8 @@ var room_move = true
 #var TysonData = [true, 20, "Default"]
 signal Ruins1
 
+var shake = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#tyson_input = true
@@ -21,6 +23,13 @@ func _ready():
 func _process(delta):
 	if in_cutscene == true:
 		tyson_input = false
+		
+var dialouge_ui = preload("res://dialouge/dialouge_ui.tscn")
+		
+func dialouge_make(dlg_data):
+	var dialouge_ui_inst = dialouge_ui.instantiate()
+	add_child(dialouge_ui_inst)
+	
 	
 	#match song_playing:
 		#"undefined":
