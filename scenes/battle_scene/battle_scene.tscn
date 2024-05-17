@@ -1,0 +1,368 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfyigp7cf67sq"]
+
+[ext_resource type="Script" path="res://scenes/battle_scene/scripts/battle_scene.gd" id="1_hxqq5"]
+[ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui.gd" id="2_2c7ph"]
+[ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui_scripts/player_turn_ui.gd" id="3_6ju14"]
+[ext_resource type="Texture2D" uid="uid://wwpxo6jhr78p" path="res://sprites/misc/square.png" id="4_3k2k0"]
+[ext_resource type="FontFile" uid="uid://cgcqai50k3mfq" path="res://sprites/mercy.ttf" id="5_uk0hx"]
+[ext_resource type="Texture2D" uid="uid://bq6bf4xceoll0" path="res://sprites/misc/soul.png" id="6_s4lpf"]
+[ext_resource type="Script" path="res://scenes/battle_scene/scripts/box.gd" id="7_hbcyq"]
+[ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui_scripts/enemy_select_ui.gd" id="7_qaver"]
+[ext_resource type="FontFile" uid="uid://crkh8wu4rtbad" path="res://sprites/8bitoperator.ttf" id="7_x4jvg"]
+[ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui_scripts/attack_ui.gd" id="9_ua0er"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_do26q"]
+size = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1qqhg"]
+line_spacing = 2.0
+font = ExtResource("5_uk0hx")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_5a5sn"]
+font = ExtResource("7_x4jvg")
+font_size = 32
+shadow_size = 0
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qmnb"]
+bg_color = Color(0.443137, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0q16"]
+bg_color = Color(0, 1, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.886275, 1, 1, 1)
+
+[node name="battle_scene" type="CanvasLayer"]
+script = ExtResource("1_hxqq5")
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="box" type="Node2D" parent="."]
+script = ExtResource("7_hbcyq")
+
+[node name="boxrect" type="Area2D" parent="box"]
+position = Vector2(157, 158)
+
+[node name="bg" type="ColorRect" parent="box/boxrect"]
+offset_left = -157.0
+offset_top = -158.0
+offset_right = -155.0
+offset_bottom = -156.0
+color = Color(0, 0, 0, 1)
+
+[node name="right" type="StaticBody2D" parent="box/boxrect"]
+
+[node name="ColorRect" type="ColorRect" parent="box/boxrect/right"]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box/boxrect/right"]
+shape = SubResource("RectangleShape2D_do26q")
+
+[node name="up" type="StaticBody2D" parent="box/boxrect"]
+
+[node name="ColorRect" type="ColorRect" parent="box/boxrect/up"]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box/boxrect/up"]
+shape = SubResource("RectangleShape2D_do26q")
+
+[node name="left" type="StaticBody2D" parent="box/boxrect"]
+
+[node name="ColorRect" type="ColorRect" parent="box/boxrect/left"]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box/boxrect/left"]
+shape = SubResource("RectangleShape2D_do26q")
+
+[node name="down" type="StaticBody2D" parent="box/boxrect"]
+
+[node name="ColorRect" type="ColorRect" parent="box/boxrect/down"]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="box/boxrect/down"]
+shape = SubResource("RectangleShape2D_do26q")
+
+[node name="ui" type="Node2D" parent="."]
+texture_filter = 3
+script = ExtResource("2_2c7ph")
+
+[node name="player_turn_ui" type="Node2D" parent="ui"]
+script = ExtResource("3_6ju14")
+
+[node name="fight" type="Node2D" parent="ui/player_turn_ui"]
+
+[node name="rect" type="NinePatchRect" parent="ui/player_turn_ui/fight"]
+clip_contents = true
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -13.0
+offset_right = 27.255
+offset_bottom = 8.31
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource("4_3k2k0")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="ui/player_turn_ui/fight/rect"]
+layout_mode = 0
+offset_left = -142.672
+offset_top = 64.0
+offset_right = -9.67221
+offset_bottom = 171.0
+rotation = 0.680564
+
+[node name="text" type="Label" parent="ui/player_turn_ui/fight"]
+offset_left = -12.0
+offset_top = -10.0
+offset_right = 90.0
+offset_bottom = 33.0
+scale = Vector2(0.4, 0.377)
+text = "SPAR"
+label_settings = SubResource("LabelSettings_1qqhg")
+horizontal_alignment = 2
+
+[node name="act" type="Node2D" parent="ui/player_turn_ui"]
+
+[node name="rect" type="NinePatchRect" parent="ui/player_turn_ui/act"]
+clip_contents = true
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -13.0
+offset_right = 27.255
+offset_bottom = 8.31
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource("4_3k2k0")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="ui/player_turn_ui/act/rect"]
+layout_mode = 0
+offset_left = -142.672
+offset_top = 64.0
+offset_right = -9.67221
+offset_bottom = 171.0
+rotation = 0.680564
+
+[node name="text" type="Label" parent="ui/player_turn_ui/act"]
+offset_left = -13.0
+offset_top = -10.0
+offset_right = 89.0
+offset_bottom = 33.0
+scale = Vector2(0.45764, 0.431633)
+text = "ACT"
+label_settings = SubResource("LabelSettings_1qqhg")
+horizontal_alignment = 2
+
+[node name="focus" type="Node2D" parent="ui/player_turn_ui"]
+
+[node name="rect" type="NinePatchRect" parent="ui/player_turn_ui/focus"]
+clip_contents = true
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -13.0
+offset_right = 27.255
+offset_bottom = 8.31
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource("4_3k2k0")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="ui/player_turn_ui/focus/rect"]
+layout_mode = 0
+offset_left = -142.672
+offset_top = 64.0
+offset_right = -9.67221
+offset_bottom = 171.0
+rotation = 0.680564
+
+[node name="text" type="Label" parent="ui/player_turn_ui/focus"]
+offset_left = -19.0
+offset_top = -10.0
+offset_right = 105.0
+offset_bottom = 33.0
+scale = Vector2(0.45764, 0.431633)
+text = "FOCUS"
+label_settings = SubResource("LabelSettings_1qqhg")
+horizontal_alignment = 2
+
+[node name="item" type="Node2D" parent="ui/player_turn_ui"]
+
+[node name="rect" type="NinePatchRect" parent="ui/player_turn_ui/item"]
+clip_contents = true
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -13.0
+offset_right = 27.255
+offset_bottom = 8.31
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource("4_3k2k0")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="ui/player_turn_ui/item/rect"]
+layout_mode = 0
+offset_left = -142.672
+offset_top = 64.0
+offset_right = -9.67221
+offset_bottom = 171.0
+rotation = 0.680564
+
+[node name="text" type="Label" parent="ui/player_turn_ui/item"]
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 91.0
+offset_bottom = 33.0
+scale = Vector2(0.45764, 0.431633)
+text = "ITEM"
+label_settings = SubResource("LabelSettings_1qqhg")
+horizontal_alignment = 2
+
+[node name="mercy" type="Node2D" parent="ui/player_turn_ui"]
+
+[node name="rect" type="NinePatchRect" parent="ui/player_turn_ui/mercy"]
+clip_contents = true
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -13.0
+offset_right = 27.255
+offset_bottom = 8.31
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource("4_3k2k0")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ColorRect" type="ColorRect" parent="ui/player_turn_ui/mercy/rect"]
+layout_mode = 0
+offset_left = -142.672
+offset_top = 64.0
+offset_right = -9.67221
+offset_bottom = 171.0
+rotation = 0.680564
+
+[node name="text" type="Label" parent="ui/player_turn_ui/mercy"]
+offset_left = -23.0
+offset_top = -10.0
+offset_right = 118.0
+offset_bottom = 33.0
+scale = Vector2(0.45764, 0.431633)
+text = "MERCY"
+label_settings = SubResource("LabelSettings_1qqhg")
+horizontal_alignment = 2
+
+[node name="anchor" type="Node2D" parent="ui/player_turn_ui"]
+position = Vector2(167, 213)
+
+[node name="enemy_select_ui" type="Node2D" parent="ui"]
+script = ExtResource("7_qaver")
+
+[node name="enemy_select_btn" type="Node2D" parent="ui/enemy_select_ui"]
+
+[node name="text" type="Label" parent="ui/enemy_select_ui/enemy_select_btn"]
+offset_left = 7.0
+offset_top = -9.0
+offset_right = 133.0
+offset_bottom = 39.0
+scale = Vector2(0.3, 0.3)
+text = "Enemy"
+label_settings = SubResource("LabelSettings_5a5sn")
+
+[node name="healthbar" type="ProgressBar" parent="ui/enemy_select_ui/enemy_select_btn"]
+offset_left = 159.0
+offset_top = -4.0
+offset_right = 237.0
+offset_bottom = 5.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0qmnb")
+theme_override_styles/fill = SubResource("StyleBoxFlat_l0q16")
+value = 50.0
+show_percentage = false
+
+[node name="hp_value" type="Label" parent="ui/enemy_select_ui/enemy_select_btn"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="container" type="Node2D" parent="ui/enemy_select_ui"]
+
+[node name="attack_ui" type="Node2D" parent="ui"]
+script = ExtResource("9_ua0er")
+
+[node name="line" type="Node2D" parent="ui/attack_ui"]
+
+[node name="enemy" type="Node2D" parent="."]
+
+[node name="attack_state" type="Node2D" parent="."]
+
+[node name="soul_selection" type="Sprite2D" parent="."]
+modulate = Color(1, 0.564706, 0, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_s4lpf")

@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://i0gkxmps7tga"]
+
+[ext_resource type="Script" path="res://scenes/overworld_menu/overworld_menu.gd" id="1_cxoq3"]
+[ext_resource type="FontFile" uid="uid://b8r8hwdgrlm6b" path="res://sprites/8bitoperator.ttf" id="2_hk7xy"]
+[ext_resource type="Texture2D" uid="uid://d0vlksajk35r6" path="res://sprites/misc/soul.png" id="3_06t2t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_av7n7"]
+line_spacing = 4.0
+font_size = 10
+shadow_size = 0
+
+[node name="overworld_menu" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_cxoq3")
+
+[node name="section_main" type="Node2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="section_main"]
+position = Vector2(159, 152)
+
+[node name="rect_bg3" type="ColorRect" parent="section_main/bg"]
+offset_left = -126.0
+offset_top = -129.0
+offset_right = -15.0
+offset_bottom = 11.0
+color = Color(1, 0.501961, 0, 1)
+
+[node name="rect_bg" type="ColorRect" parent="section_main/bg"]
+offset_left = -134.0
+offset_top = -135.0
+offset_right = -18.0
+offset_bottom = 8.0
+
+[node name="rect_bg2" type="ColorRect" parent="section_main/bg"]
+offset_left = -131.0
+offset_top = -131.0
+offset_right = -22.0
+offset_bottom = 4.0
+color = Color(0, 0, 0, 1)
+
+[node name="select_fx" type="ColorRect" parent="section_main"]
+offset_left = 174.0
+offset_top = 154.0
+offset_right = 259.0
+offset_bottom = 173.0
+pivot_offset = Vector2(0, 19.24)
+color = Color(1, 0.513726, 0, 1)
+
+[node name="select_fx2" type="ColorRect" parent="section_main/select_fx"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 88.0
+offset_bottom = 21.0
+pivot_offset = Vector2(0, 19.24)
+
+[node name="item" type="Sprite2D" parent="section_main"]
+position = Vector2(67, -286)
+
+[node name="text" type="Label" parent="section_main/item"]
+offset_left = 28.0
+offset_top = -20.0
+offset_right = 98.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("2_hk7xy")
+text = "ITEM"
+label_settings = SubResource("LabelSettings_av7n7")
+metadata/_edit_use_anchors_ = true
+
+[node name="equip" type="Sprite2D" parent="section_main"]
+position = Vector2(67, -286)
+
+[node name="text" type="Label" parent="section_main/equip"]
+offset_left = 28.0
+offset_top = -20.0
+offset_right = 114.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("2_hk7xy")
+text = "EQUIP"
+label_settings = SubResource("LabelSettings_av7n7")
+metadata/_edit_use_anchors_ = true
+
+[node name="stats" type="Sprite2D" parent="section_main"]
+position = Vector2(67, -286)
+
+[node name="text" type="Label" parent="section_main/stats"]
+offset_left = 28.0
+offset_top = -20.0
+offset_right = 118.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("2_hk7xy")
+text = "STATS"
+label_settings = SubResource("LabelSettings_av7n7")
+metadata/_edit_use_anchors_ = true
+
+[node name="cell" type="Sprite2D" parent="section_main"]
+position = Vector2(67, -286)
+
+[node name="text" type="Label" parent="section_main/cell"]
+offset_left = 28.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("2_hk7xy")
+text = "CELL"
+label_settings = SubResource("LabelSettings_av7n7")
+
+[node name="anchor" type="Node2D" parent="section_main"]
+position = Vector2(25, 59)
+
+[node name="Soul" type="Sprite2D" parent="."]
+modulate = Color(1, 0.572549, 0, 1)
+position = Vector2(108, 166)
+texture = ExtResource("3_06t2t")

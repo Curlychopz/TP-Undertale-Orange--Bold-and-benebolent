@@ -165,16 +165,16 @@ func _process(_delta):
 		
 
 
-func _on_coral_cutscene_ruins_animation_finished(anim_name):
-	global.tyson_input = true
+func _on_coral_cutscene_ruins_animation_finished(anim_name): 
+	global.tyson_input = true 
 		
 		
 #breaks if you touch, pls don't
-func _on_ruins_coral_cut_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	if Input.is_action_pressed("up") and global.tyson_input == true and global.global_flag == 0 and global.room_move == true:
+func _on_ruins_coral_cut_body_shape_entered(body_rid, body, body_shape_index, local_shape_index): 
+	if Input.is_action_pressed("up") and global.tyson_input == true and global.global_flag == 0 and global.room_move == true: 
 		print("touched") 
-		emit_signal("Coral1")
-		($"tyson-sprite" as AnimatedSprite2D).stop()
+		emit_signal("Coral1") 
+		($"tyson-sprite" as AnimatedSprite2D).stop() 
 
 func _on_tyson_timer_timeout():
 	pass

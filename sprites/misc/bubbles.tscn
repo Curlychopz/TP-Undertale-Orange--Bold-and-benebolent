@@ -23,6 +23,5 @@ animations = [{
 }]
 
 [node name="bubbles" type="AnimatedSprite2D"]
-visible = false
 sprite_frames = SubResource("SpriteFrames_2owlw")
-animation = &"song"
+animation = &"surprise"

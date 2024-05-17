@@ -26,7 +26,6 @@ func _physics_process(delta):
 		# Gets the current dialouge node entry
 		current_dialogue = dialogue_instance.get_children()[dialogue_index]
 		
-		
 		text_ticker_timer -= current_dialogue.write_speed
 		if text_ticker_timer < 0:
 			text.visible_characters += 1

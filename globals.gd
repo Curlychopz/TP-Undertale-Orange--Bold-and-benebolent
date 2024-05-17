@@ -11,6 +11,7 @@ var room_move = true
 signal Ruins1
 
 var shake = 0
+var battle_data = self
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

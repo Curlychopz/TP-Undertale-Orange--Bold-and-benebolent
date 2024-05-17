@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyhykov3go8wa"]
+
+[ext_resource type="Script" path="res://scenes/battle_scene/resources/backgrounds/scripts/background_generic.gd" id="1_qtrfo"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qtrfo")
