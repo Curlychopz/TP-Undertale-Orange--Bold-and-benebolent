@@ -28,6 +28,10 @@ window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/scale=2.0
 
+[editor]
+
+movie_writer/movie_file="C:/Users/saniy/Videos/utbnb.avi"
+
 [input]
 
 accept={

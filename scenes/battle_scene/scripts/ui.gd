@@ -6,7 +6,8 @@ enum ui_states {
 	ACT_SELECT,
 	ITEM_SELECT,
 	MERCY_SELECT,
-	ATTACK
+	ATTACK,
+	INACTIVE
 }
 
 var current_state = ui_states.MAIN

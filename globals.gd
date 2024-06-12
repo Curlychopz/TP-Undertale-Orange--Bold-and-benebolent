@@ -22,9 +22,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	# -Make sure player cant move when in cutscene-
 	if in_cutscene == true:
 		tyson_input = false
 		
+	# -Shake dampening-
+	Globals.shake /= 1.3
+	
 var dialouge_ui = preload("res://dialouge/dialouge_ui.tscn")
 		
 func dialouge_make(dlg_data):

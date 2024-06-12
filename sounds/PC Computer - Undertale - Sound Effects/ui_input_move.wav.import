@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cp4n4yo4isau6"
+path="res://.godot/imported/ui_input_move.wav-3727fd9414d0013577896fff9d4dcad2.sample"
+
+[deps]
+
+source_file="res://sounds/PC Computer - Undertale - Sound Effects/ui_input_move.wav"
+dest_files=["res://.godot/imported/ui_input_move.wav-3727fd9414d0013577896fff9d4dcad2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

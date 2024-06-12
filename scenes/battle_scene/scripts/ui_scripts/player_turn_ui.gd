@@ -26,17 +26,22 @@ func _physics_process(delta):
 				index += 1
 			else:
 				index = 0
-		 
+			$menu_move.playing = true
 		if Input.is_action_just_pressed("left"):
 			if index > 0:
 				index -= 1
 			else:
 				index = buttons.size() - 1
+			$menu_move.playing = true
+		
 			
 		if Input.is_action_just_pressed("accept"):
 			button_press_anim()
 			if current_selection == $fight:
 				get_parent().current_state = get_parent().ui_states.ENEMY_SELECT
+			
+			
+				
 	ui_animations(delta)
 	
 

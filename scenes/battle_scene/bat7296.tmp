@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cfyigp7cf67sq"]
+[gd_scene load_steps=17 format=3 uid="uid://cfyigp7cf67sq"]
 
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/battle_scene.gd" id="1_hxqq5"]
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui.gd" id="2_2c7ph"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://wwpxo6jhr78p" path="res://sprites/misc/square.png" id="4_3k2k0"]
 [ext_resource type="FontFile" uid="uid://cgcqai50k3mfq" path="res://sprites/mercy.ttf" id="5_uk0hx"]
 [ext_resource type="Texture2D" uid="uid://bq6bf4xceoll0" path="res://sprites/misc/soul.png" id="6_s4lpf"]
-[ext_resource type="AudioStream" uid="uid://cp4n4yo4isau6" path="res://sounds/PC Computer - Undertale - Sound Effects/ui_input_move.wav" id="7_2ja08"]
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/box.gd" id="7_hbcyq"]
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui_scripts/enemy_select_ui.gd" id="7_qaver"]
 [ext_resource type="FontFile" uid="uid://crkh8wu4rtbad" path="res://sprites/8bitoperator.ttf" id="7_x4jvg"]
@@ -33,7 +32,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0q16"]
 bg_color = Color(0, 1, 0, 1)
@@ -41,7 +40,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0.886275, 1, 1, 1)
 
 [node name="battle_scene" type="CanvasLayer"]
 script = ExtResource("1_hxqq5")
@@ -325,9 +324,6 @@ horizontal_alignment = 2
 [node name="anchor" type="Node2D" parent="ui/player_turn_ui"]
 position = Vector2(167, 213)
 
-[node name="menu_move" type="AudioStreamPlayer2D" parent="ui/player_turn_ui"]
-stream = ExtResource("7_2ja08")
-
 [node name="enemy_select_ui" type="Node2D" parent="ui"]
 script = ExtResource("7_qaver")
 
@@ -353,45 +349,28 @@ value = 50.0
 show_percentage = false
 
 [node name="hp_value" type="Label" parent="ui/enemy_select_ui/enemy_select_btn"]
-offset_left = 161.0
-offset_top = 5.0
-offset_right = 287.0
-offset_bottom = 53.0
-scale = Vector2(0.15, 0.15)
-text = "Enemy"
-label_settings = SubResource("LabelSettings_5a5sn")
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="container" type="Node2D" parent="ui/enemy_select_ui"]
 
 [node name="attack_ui" type="Node2D" parent="ui"]
 script = ExtResource("9_ua0er")
 
+[node name="line" type="Node2D" parent="ui/attack_ui"]
+
 [node name="reticle" type="Node2D" parent="ui/attack_ui"]
-position = Vector2(153, 115)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="ui/attack_ui/reticle"]
-offset_left = -120.0
-offset_top = 9.0
-offset_right = 137.0
-offset_bottom = 84.0
+offset_left = 39.0
+offset_top = 27.0
+offset_right = 232.0
+offset_bottom = 122.0
 texture = ExtResource("10_kwpdk")
 patch_margin_left = 12
 patch_margin_top = 12
 patch_margin_right = 14
 patch_margin_bottom = 14
-
-[node name="crit_pos" type="Node2D" parent="ui/attack_ui"]
-
-[node name="line" type="Node2D" parent="ui/attack_ui"]
-position = Vector2(47, 132)
-
-[node name="Line2D" type="Line2D" parent="ui/attack_ui/line"]
-points = PackedVector2Array(0, -1, 0, 53)
-
-[node name="treshold" type="Node2D" parent="ui/attack_ui"]
-position = Vector2(273, 158)
-
-[node name="item_ui" type="Node2D" parent="ui"]
 
 [node name="enemy" type="Node2D" parent="."]
 

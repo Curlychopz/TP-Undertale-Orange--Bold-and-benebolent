@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cfyigp7cf67sq"]
+[gd_scene load_steps=20 format=3 uid="uid://cfyigp7cf67sq"]
 
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/battle_scene.gd" id="1_hxqq5"]
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui.gd" id="2_2c7ph"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui_scripts/enemy_select_ui.gd" id="7_qaver"]
 [ext_resource type="FontFile" uid="uid://crkh8wu4rtbad" path="res://sprites/8bitoperator.ttf" id="7_x4jvg"]
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui_scripts/attack_ui.gd" id="9_ua0er"]
+[ext_resource type="FontFile" uid="uid://cbf05i7kdtb64" path="res://sprites/8bitoperator-tfx.ttf" id="10_3jw80"]
 [ext_resource type="Texture2D" uid="uid://4p6x8v1k0006" path="res://sprites/misc/dialouge_box.png" id="10_kwpdk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do26q"]
@@ -33,7 +34,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l0q16"]
 bg_color = Color(0, 1, 0, 1)
@@ -41,7 +42,10 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0.886275, 1, 1, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_r34gt"]
+base_font = ExtResource("10_3jw80")
 
 [node name="battle_scene" type="CanvasLayer"]
 script = ExtResource("1_hxqq5")
@@ -353,13 +357,11 @@ value = 50.0
 show_percentage = false
 
 [node name="hp_value" type="Label" parent="ui/enemy_select_ui/enemy_select_btn"]
-offset_left = 161.0
-offset_top = 5.0
-offset_right = 287.0
-offset_bottom = 53.0
-scale = Vector2(0.15, 0.15)
-text = "Enemy"
-label_settings = SubResource("LabelSettings_5a5sn")
+offset_left = 164.0
+offset_right = 204.0
+offset_bottom = 23.0
+theme_override_fonts/font = SubResource("FontVariation_r34gt")
+text = "10"
 
 [node name="container" type="Node2D" parent="ui/enemy_select_ui"]
 
