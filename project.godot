@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Undertale B&B"
-run/main_scene="res://scenes/misc/scene_switcher.tscn"
+run/main_scene="res://scenes/misc/example_town.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/show_image=false
 config/icon="res://icon.svg"
