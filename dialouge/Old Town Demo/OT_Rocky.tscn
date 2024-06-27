@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://r6py6fumty2i"]
+
+[ext_resource type="Script" path="res://scripts/systems/dialouge/Dialouge_data.gd" id="1_l0unx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="dlg_1" type="Node" parent="."]
+script = ExtResource("1_l0unx")
+text = " 0its red[/coHuman... i remember [color = red] YOU'RE [/color] Genocides"

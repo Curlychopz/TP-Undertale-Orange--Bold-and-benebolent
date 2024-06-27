@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @export var interactable_once = false
 @export var text_only = true
-@export var interact_text = preload("res://dialouge/test_dialouge.tscn")
+@export var interact_text = preload("res://dialouge/Old Town Demo/OT_Rocky.tscn")
 
 var interacted = false
 var interact_toggle = false
