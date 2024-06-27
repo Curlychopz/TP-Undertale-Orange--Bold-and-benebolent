@@ -67,8 +67,9 @@ func trans_representation(room):
 		timer.start()
 	
 func _ready():
-	trans.play("blank")
-	trans.stop
+	pass;
+	#trans.play("blank")
+	#trans.stop
 	
 
 func _process(_delta):
@@ -77,9 +78,9 @@ func _process(_delta):
 	if test_toggle > 1:
 		test_toggle = 0
 	
-	if transition == false and trans.is_playing() == true:
-		trans.play("blank")
-		trans.stop
+	#if transition == false and trans.is_playing() == true:
+		#trans.play("blank")
+		#trans.stop
 
 	$TysonView.offset = Vector2(randi_range(-Globals.shake, Globals.shake), randi_range(-Globals.shake, Globals.shake))
 	

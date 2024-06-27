@@ -94,6 +94,7 @@ wait_time = 26.897
 
 [node name="TysonView" type="Camera2D" parent="."]
 visible = false
+enabled = false
 limit_left = 0
 limit_top = 0
 limit_right = 680
