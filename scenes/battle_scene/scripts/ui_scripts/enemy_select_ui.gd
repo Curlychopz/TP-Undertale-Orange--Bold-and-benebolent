@@ -31,7 +31,7 @@ func _ready():
 func _physics_process(delta):
 	
 	position /= 1.3
-	if get_parent().current_state == get_parent().ui_states.ENEMY_SELECT:
+	if get_parent().current_state == get_parent().ui_states.ENEMY_SELECT and not get_parent().inactive:
 		modulate += (Color.WHITE - modulate) * 0.5
 		animations(delta)
 		

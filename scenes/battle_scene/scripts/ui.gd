@@ -7,7 +7,13 @@ enum ui_states {
 	ITEM_SELECT,
 	MERCY_SELECT,
 	ATTACK,
-	INACTIVE
 }
 
 var current_state = ui_states.MAIN
+var inactive = false
+
+func _physics_process(delta):
+	if Globals.battle_data.current_battle_state == Globals.battle_data.battle_states.INTRO:
+		inactive = true
+	elif inactive == true:
+		inactive = false

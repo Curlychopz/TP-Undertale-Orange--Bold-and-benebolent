@@ -1,0 +1,429 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqpsm0t75bjj2"]
+
+[ext_resource type="Script" path="res://scenes/battle_scene/scripts/battle_intro.gd" id="1_8s3d6"]
+
+[sub_resource type="Animation" id="Animation_e05sv"]
+resource_name = "new_animation"
+length = 2.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-158, 464), Vector2(-158, 464), Vector2(-158, -1017)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"initiate_transition_to_battle"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3q0lo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-158, -1017)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1xlu2"]
+_data = {
+"RESET": SubResource("Animation_3q0lo"),
+"new_animation": SubResource("Animation_e05sv")
+}
+
+[node name="battle_intro" type="CanvasLayer"]
+script = ExtResource("1_8s3d6")
+
+[node name="colorect" type="Node2D" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(0.12549, 0.117647, 0.231373, 1)
+position = Vector2(316, 726)
+amount = 250
+lifetime = 5.0
+explosiveness = 0.85
+emission_shape = 3
+emission_rect_extents = Vector2(333, 250)
+gravity = Vector2(0, -500)
+angular_velocity_min = -222.0
+angular_velocity_max = 222.0
+scale_amount_min = 55.0
+scale_amount_max = 77.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0.12549, 0.117647, 0.231373, 1)
+offset_left = -158.0
+offset_top = -1017.0
+offset_right = 729.0
+offset_bottom = -323.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = -89.0
+offset_right = 211.0
+offset_bottom = -49.0
+rotation = 0.523599
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = -69.0
+offset_right = 752.0
+offset_bottom = -29.0
+rotation = 0.523599
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 654.0
+offset_top = -43.0
+offset_right = 694.0
+offset_bottom = -3.0
+rotation = 0.523599
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 433.0
+offset_top = -70.0
+offset_right = 473.0
+offset_bottom = -30.0
+rotation = 0.523599
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect5" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = -19.0
+offset_right = 312.0
+offset_bottom = 21.0
+rotation = -0.523599
+scale = Vector2(2.44131, 2.44131)
+
+[node name="ColorRect6" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 4.00001
+offset_right = 542.0
+offset_bottom = 44.0
+rotation = -0.523599
+scale = Vector2(2.44131, 2.44131)
+
+[node name="ColorRect7" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 511.0
+offset_top = -85.0
+offset_right = 551.0
+offset_bottom = -45.0
+rotation = -1.309
+scale = Vector2(2.00862, 2.00862)
+
+[node name="ColorRect8" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = -100.0
+offset_right = 326.0
+offset_bottom = -60.0
+rotation = -1.309
+scale = Vector2(2.00862, 2.00862)
+
+[node name="ColorRect9" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 280.476
+offset_top = 660.259
+offset_right = 320.476
+offset_bottom = 700.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect10" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 821.476
+offset_top = 680.259
+offset_right = 861.476
+offset_bottom = 720.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect11" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 763.476
+offset_top = 706.259
+offset_right = 803.476
+offset_bottom = 746.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect12" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 542.476
+offset_top = 679.259
+offset_right = 582.476
+offset_bottom = 719.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect13" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 381.476
+offset_top = 730.259
+offset_right = 421.476
+offset_bottom = 770.259
+rotation = 2.08849
+scale = Vector2(2.44131, 2.44131)
+
+[node name="ColorRect14" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 721.0
+offset_right = 846.0
+offset_bottom = 761.0
+rotation = 0.884419
+scale = Vector2(2.44131, 2.44131)
+
+[node name="ColorRect25" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 742.0
+offset_right = 569.0
+offset_bottom = 782.0
+rotation = 0.884419
+scale = Vector2(1.24662, 0.908929)
+
+[node name="ColorRect26" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 795.0
+offset_right = 274.0
+offset_bottom = 835.0
+rotation = 0.884419
+scale = Vector2(1.24662, 0.908929)
+
+[node name="ColorRect15" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 620.476
+offset_top = 664.259
+offset_right = 660.476
+offset_bottom = 704.259
+rotation = 0.785398
+scale = Vector2(2.00862, 2.00862)
+
+[node name="ColorRect16" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 395.476
+offset_top = 649.259
+offset_right = 435.476
+offset_bottom = 689.259
+rotation = 0.785398
+scale = Vector2(2.00862, 2.00862)
+
+[node name="ColorRect17" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 157.476
+offset_top = 600.259
+offset_right = 197.476
+offset_bottom = 640.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect18" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 698.476
+offset_top = 620.259
+offset_right = 738.476
+offset_bottom = 660.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect19" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 640.476
+offset_top = 646.259
+offset_right = 680.476
+offset_bottom = 686.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect20" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 419.476
+offset_top = 619.259
+offset_right = 459.476
+offset_bottom = 659.259
+rotation = 2.61799
+scale = Vector2(4.51082, 4.51082)
+
+[node name="ColorRect21" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 258.476
+offset_top = 670.259
+offset_right = 298.476
+offset_bottom = 710.259
+rotation = 1.5708
+scale = Vector2(2.44131, 2.44131)
+
+[node name="ColorRect22" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 488.476
+offset_top = 693.259
+offset_right = 528.476
+offset_bottom = 733.259
+rotation = 1.5708
+scale = Vector2(2.44131, 2.44131)
+
+[node name="ColorRect23" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 497.476
+offset_top = 604.259
+offset_right = 537.476
+offset_bottom = 644.259
+rotation = 0.785398
+scale = Vector2(2.00862, 2.00862)
+
+[node name="ColorRect24" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 272.476
+offset_top = 589.259
+offset_right = 312.476
+offset_bottom = 629.259
+rotation = 0.785398
+scale = Vector2(2.00862, 2.00862)
+
+[node name="ColorRect27" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = -184.0
+offset_right = 326.0
+offset_bottom = 376.0
+rotation = 0.523599
+
+[node name="ColorRect28" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 727.0
+offset_top = -161.0
+offset_right = 767.0
+offset_bottom = 399.0
+rotation = 0.523599
+
+[node name="ColorRect29" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = -194.0
+offset_right = 740.0
+offset_bottom = 366.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect30" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = -72.0
+offset_right = 497.0
+offset_bottom = 488.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect31" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 644.0
+offset_top = -106.0
+offset_right = 684.0
+offset_bottom = 454.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect32" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 683.0
+offset_right = 306.0
+offset_bottom = 1243.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect33" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 709.0
+offset_right = 418.0
+offset_bottom = 1269.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect34" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 638.0
+offset_right = 611.0
+offset_bottom = 1198.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect35" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 686.0
+offset_right = 775.0
+offset_bottom = 1246.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect36" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 648.0
+offset_right = 906.0
+offset_bottom = 1208.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="ColorRect37" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 681.0
+offset_right = 675.0
+offset_bottom = 1241.0
+rotation = 0.523599
+scale = Vector2(-0.87382, 0.309285)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1xlu2")
+}
+autoplay = "new_animation"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 788.0
+offset_top = 113.0
+offset_right = 1054.0
+offset_bottom = 245.0
+scale = Vector2(17.4234, 1.98719)
+text = "im having
+explosive 
+diarrhea"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

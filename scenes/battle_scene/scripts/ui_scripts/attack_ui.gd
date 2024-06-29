@@ -19,7 +19,7 @@ var attack_land_timer = 1
 var attack_finish_timer = 1
 
 func _physics_process(delta):
-	if get_parent().current_state == get_parent().ui_states.ATTACK:
+	if get_parent().current_state == get_parent().ui_states.ATTACK and not get_parent().inactive:
 		
 		Globals.battle_data.get_node("ui/player_turn_ui").position.y += 4
 		Globals.battle_data.get_node("ui/player_turn_ui").modulate -= Color.WHITE * delta * 6

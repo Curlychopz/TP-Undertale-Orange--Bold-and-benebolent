@@ -13,6 +13,13 @@ signal Ruins1
 var shake = 0
 var battle_data = self
 
+# PLAYER DATA =============================
+var hp = 20
+var max_hp = 20
+
+var def = 1
+var item = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#tyson_input = true
@@ -31,7 +38,10 @@ func _process(delta):
 	Globals.shake /= 1.3
 	
 var dialouge_ui = preload("res://dialouge/dialouge_ui.tscn")
-		
+
+func sfx(stream = preload("res://sounds/PC Computer - Undertale - Sound Effects/snd_damage.wav"), pos = Vector2.ZERO ):
+	pass
+
 func dialouge_make(dlg_data):
 	var dialouge_ui_inst = dialouge_ui.instantiate()
 	add_child(dialouge_ui_inst)

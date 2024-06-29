@@ -16,7 +16,7 @@ func _physics_process(delta):
 	position /= 1.3
 	modulate += (Color.WHITE - modulate) * 0.2
 	
-	if get_parent().current_state == get_parent().ui_states.MAIN:
+	if get_parent().current_state == get_parent().ui_states.MAIN and get_parent().inactive == false:
 		current_selection = buttons[index]
 		get_parent().get_parent().soul_selection.position += (current_selection.position - Vector2(23,3) - get_parent().get_parent().soul_selection.position) * 0.2
 		
@@ -41,8 +41,8 @@ func _physics_process(delta):
 				get_parent().current_state = get_parent().ui_states.ENEMY_SELECT
 			
 			
-				
-	ui_animations(delta)
+	if Globals.battle_data.current_battle_state != Globals.battle_data.battle_states.INTRO: 
+		ui_animations(delta)
 	
 
 func ui_animations(delta):

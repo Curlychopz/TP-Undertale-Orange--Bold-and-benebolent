@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cfyigp7cf67sq"]
+[gd_scene load_steps=19 format=3 uid="uid://cfyigp7cf67sq"]
 
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/battle_scene.gd" id="1_hxqq5"]
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui.gd" id="2_2c7ph"]
@@ -13,8 +13,10 @@
 [ext_resource type="Script" path="res://scenes/battle_scene/scripts/ui_scripts/attack_ui.gd" id="9_ua0er"]
 [ext_resource type="Texture2D" uid="uid://4p6x8v1k0006" path="res://sprites/misc/dialouge_box.png" id="10_kwpdk"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_o207b"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_do26q"]
-size = Vector2(2, 2)
+size = Vector2(8, 8)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1qqhg"]
 line_spacing = 2.0
@@ -62,6 +64,7 @@ offset_bottom = -156.0
 color = Color(0, 0, 0, 1)
 
 [node name="right" type="StaticBody2D" parent="box/boxrect"]
+physics_material_override = SubResource("PhysicsMaterial_o207b")
 
 [node name="ColorRect" type="ColorRect" parent="box/boxrect/right"]
 offset_left = -1.0
@@ -73,6 +76,7 @@ offset_bottom = 1.0
 shape = SubResource("RectangleShape2D_do26q")
 
 [node name="up" type="StaticBody2D" parent="box/boxrect"]
+physics_material_override = SubResource("PhysicsMaterial_o207b")
 
 [node name="ColorRect" type="ColorRect" parent="box/boxrect/up"]
 offset_left = -1.0
@@ -84,6 +88,7 @@ offset_bottom = 1.0
 shape = SubResource("RectangleShape2D_do26q")
 
 [node name="left" type="StaticBody2D" parent="box/boxrect"]
+physics_material_override = SubResource("PhysicsMaterial_o207b")
 
 [node name="ColorRect" type="ColorRect" parent="box/boxrect/left"]
 offset_left = -1.0
@@ -95,6 +100,7 @@ offset_bottom = 1.0
 shape = SubResource("RectangleShape2D_do26q")
 
 [node name="down" type="StaticBody2D" parent="box/boxrect"]
+physics_material_override = SubResource("PhysicsMaterial_o207b")
 
 [node name="ColorRect" type="ColorRect" parent="box/boxrect/down"]
 offset_left = -1.0
