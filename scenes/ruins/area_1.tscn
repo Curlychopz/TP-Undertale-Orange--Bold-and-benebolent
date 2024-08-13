@@ -9,6 +9,7 @@ script = ExtResource("1_gs5ur")
 level_name = "ruins_1"
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -842.0
 offset_top = -934.0
 offset_right = 1290.0
