@@ -93,12 +93,6 @@ debug_color = Color(0.694118, 0.486275, 0.231373, 0.419608)
 wait_time = 26.897
 
 [node name="TysonView" type="Camera2D" parent="."]
-visible = false
-enabled = false
-limit_left = 0
-limit_top = 0
-limit_right = 680
-limit_bottom = 260
 limit_smoothed = true
 
 [node name="cutscene_timer" type="Timer" parent="."]

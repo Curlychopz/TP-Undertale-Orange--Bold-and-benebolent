@@ -5,7 +5,7 @@ extends CharacterBody2D
 var tyson_anim = "down"
 var tyson_speed = 1.3
 var test_toggle = 0
-#var tyson_input = true  
+var tyson_input = true  
 var cutsNum = 0
 var transition = false
 
@@ -68,8 +68,8 @@ func trans_representation(room):
 	
 func _ready():
 	pass;
-	#trans.play("blank")
-	#trans.stop
+	trans.play("blank")
+	trans.stop
 	
 
 func _process(_delta):
@@ -78,9 +78,9 @@ func _process(_delta):
 	if test_toggle > 1:
 		test_toggle = 0
 	
-	#if transition == false and trans.is_playing() == true:
-		#trans.play("blank")
-		#trans.stop
+	if transition == false and trans.is_playing() == true:
+		trans.play("blank")
+		trans.stop
 
 	$TysonView.offset = Vector2(randi_range(-Globals.shake, Globals.shake), randi_range(-Globals.shake, Globals.shake))
 	
@@ -198,10 +198,10 @@ func _on_ruins_a_1_to_a_2_body_shape_entered(body_rid, body, body_shape_index, l
 		timer.timeout.connect(func(): 
 			global_position = scene_sw_ruins.ruins_2.global_position
 			#look i was going to do this cool array but honestly i cba
-			View.limit_top = scene_sw_ruins.ruins_2.cam_pos[0]
-			View.limit_right = scene_sw_ruins.ruins_2.cam_pos[1]
-			View.limit_bottom = scene_sw_ruins.ruins_2.cam_pos[2]
-			View.limit_left = scene_sw_ruins.ruins_2.cam_pos[3]
+			#View.limit_top = scene_sw_ruins.ruins_2.cam_pos[0]
+			#View.limit_right = scene_sw_ruins.ruins_2.cam_pos[1]
+			#View.limit_bottom = scene_sw_ruins.ruins_2.cam_pos[2]
+			#View.limit_left = scene_sw_ruins.ruins_2.cam_pos[3]
 			trans.play("transition out")
 			global.tyson_input = true
 			var timer2 : Timer = Timer.new()
@@ -233,10 +233,10 @@ func _on_ruins_a_2_to_a_3_body_shape_entered(body_rid, body, body_shape_index, l
 		timer.timeout.connect(func(): 
 			global_position = scene_sw_ruins.ruins_3.global_position
 			#look i was going to do this cool array but honestly i cba
-			View.limit_top = scene_sw_ruins.ruins_3.cam_pos[0]
-			View.limit_right = scene_sw_ruins.ruins_3.cam_pos[1]
-			View.limit_bottom = scene_sw_ruins.ruins_3.cam_pos[2]
-			View.limit_left = scene_sw_ruins.ruins_3.cam_pos[3]
+			#View.limit_top = scene_sw_ruins.ruins_3.cam_pos[0]
+			#View.limit_right = scene_sw_ruins.ruins_3.cam_pos[1]
+			#View.limit_bottom = scene_sw_ruins.ruins_3.cam_pos[2]
+			#View.limit_left = scene_sw_ruins.ruins_3.cam_pos[3]
 			trans.play("transition out")
 			global.tyson_input = true
 			var timer2 : Timer = Timer.new()
@@ -269,10 +269,10 @@ func _on_ruins_a_3_to_a_4_body_shape_entered(body_rid, body, body_shape_index, l
 		timer.timeout.connect(func(): 
 			global_position = scene_sw_ruins.ruins_4.global_position
 			#look i was going to do this cool array but honestly i cba
-			View.limit_top = scene_sw_ruins.ruins_4.cam_pos[0]
-			View.limit_right = scene_sw_ruins.ruins_4.cam_pos[1]
-			View.limit_bottom = scene_sw_ruins.ruins_4.cam_pos[2]
-			View.limit_left = scene_sw_ruins.ruins_4.cam_pos[3]
+			#View.limit_top = scene_sw_ruins.ruins_4.cam_pos[0]
+			#View.limit_right = scene_sw_ruins.ruins_4.cam_pos[1]
+			#View.limit_bottom = scene_sw_ruins.ruins_4.cam_pos[2]
+			#View.limit_left = scene_sw_ruins.ruins_4.cam_pos[3]
 			trans.play("transition out")
 			global.tyson_input = true
 			var timer2 : Timer = Timer.new()
@@ -319,10 +319,10 @@ func _on_ruins_a_4_to_a_5_body_shape_entered(body_rid, body, body_shape_index, l
 		timer.timeout.connect(func(): 
 			global_position = scene_sw_ruins.ruins_5.global_position
 			#look i was going to do this cool array but honestly i cba
-			View.limit_top = scene_sw_ruins.ruins_5.cam_pos[0]
-			View.limit_right = scene_sw_ruins.ruins_5.cam_pos[1]
-			View.limit_bottom = scene_sw_ruins.ruins_5.cam_pos[2]
-			View.limit_left = scene_sw_ruins.ruins_5.cam_pos[3]
+			#View.limit_top = scene_sw_ruins.ruins_5.cam_pos[0]
+			#View.limit_right = scene_sw_ruins.ruins_5.cam_pos[1]
+			#View.limit_bottom = scene_sw_ruins.ruins_5.cam_pos[2]
+			#View.limit_left = scene_sw_ruins.ruins_5.cam_pos[3]
 			trans.play("transition out")
 			global.tyson_input = true
 			var timer2 : Timer = Timer.new()

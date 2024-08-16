@@ -9,6 +9,15 @@ signal transition
 	$Area2,
 	$area1,
 	]
+	
+var ruinsCameraLimitTop = [
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	]
 
 var current_room = null
 
