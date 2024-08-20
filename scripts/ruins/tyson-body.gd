@@ -196,7 +196,7 @@ func _on_ruins_a_1_to_a_2_body_shape_entered(body_rid, body, body_shape_index, l
 		timer.autostart = false
 		timer.wait_time = 0.5
 		timer.timeout.connect(func(): 
-			global_position = scene_sw_ruins.ruins_2.global_position
+			global_position = scene_sw_ruins.Ty_Pos_2_Enter.global_position
 			#look i was going to do this cool array but honestly i cba
 			#View.limit_top = scene_sw_ruins.ruins_2.cam_pos[0]
 			#View.limit_right = scene_sw_ruins.ruins_2.cam_pos[1]
