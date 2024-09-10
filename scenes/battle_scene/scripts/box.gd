@@ -32,9 +32,9 @@ func _physics_process(delta):
 		$boxrect.position += (pos - $boxrect.position) * 0.2
 	
 	
-	if Input.is_action_just_pressed("accept"):
-		
-		size_x = randi_range(6,150)
-		size_y = randi_range(6,100)
+	#if Input.is_action_just_pressed("accept"):
+		#
+		#size_x = randi_range(6,150)
+		#size_y = randi_range(6,100)
 	
 	
