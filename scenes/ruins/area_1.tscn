@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwqyuwfo6ft5f"]
+[gd_scene load_steps=5 format=3 uid="uid://dwqyuwfo6ft5f"]
 
 [ext_resource type="Script" path="res://scenes/ruins/area_1.gd" id="1_gs5ur"]
 [ext_resource type="PackedScene" uid="uid://bwoah7i746blc" path="res://Tile Sheets/tiles.tscn" id="2_85st0"]
+[ext_resource type="PackedScene" uid="uid://cdgml71f1mhl6" path="res://Main_Characters/tyson_body.tscn" id="2_a6fd1"]
 [ext_resource type="PackedScene" uid="uid://s8f6jlo3w1t" path="res://scenes/misc/interactable.tscn" id="3_su6lp"]
 
 [node name="area1" type="Node2D"]
 script = ExtResource("1_gs5ur")
 level_name = "ruins_1"
+
+[node name="tyson-body" parent="." instance=ExtResource("2_a6fd1")]
+position = Vector2(151, 127)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -30,27 +34,21 @@ position = Vector2(353, 16)
 [node name="RuinsTpPoints" type="Node" parent="."]
 
 [node name="RuinsFloweyBottom" type="Node2D" parent="RuinsTpPoints"]
-visible = false
 position = Vector2(580, -16)
 
 [node name="RuinsEntranceBottom" type="Node2D" parent="RuinsTpPoints"]
-visible = false
 position = Vector2(120, -66)
 
 [node name="RuinsFirstPuzzleBottom" type="Node2D" parent="RuinsTpPoints"]
-visible = false
 position = Vector2(461, -366)
 
 [node name="RuinsBridgeLeft" type="Node2D" parent="RuinsTpPoints"]
-visible = false
 position = Vector2(119, 512)
 
 [node name="RuinsPoolLeft" type="Node2D" parent="RuinsTpPoints"]
-visible = false
 position = Vector2(121, 800)
 
 [node name="RuinsLongLeft" type="Node2D" parent="RuinsTpPoints"]
-visible = false
 position = Vector2(43, 1016)
 
 [node name="RuinsTpBodies" type="Node" parent="."]
