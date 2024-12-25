@@ -14,6 +14,7 @@ config/name="Undertale B&B"
 run/main_scene="res://scenes/misc/example_town.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/show_image=false
+boot_splash/fullsize=false
 config/icon="res://icon.svg"
 
 [autoload]

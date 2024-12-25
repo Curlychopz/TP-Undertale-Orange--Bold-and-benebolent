@@ -1,23 +1,9 @@
 extends Node
 
 signal transition
-
-@onready var rooms = [
-	$logo,
-	$Area_4,
-	$RuinsRoom3,
-	$Area2,
-	$area1,
-	]
-	
-var ruinsCameraLimitTop = [
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	]
+@onready var TysonBody = $"tyson-body"
+@onready var R1Init = $Ty_Pos_1_init
+@onready var R2E = $Ty_Pos_2_Enter
 
 var current_room = null
 

@@ -43,12 +43,12 @@ func trans_representation(room):
 		timer.autostart = false
 		timer.wait_time = 0.5
 		timer.timeout.connect(func(): 
-			global_position = scene_sw_ruins.room.global_position
-			#look i was going to do this cool array but honestly i cba
-			View.limit_top = scene_sw_ruins.room.cam_pos[0]
-			View.limit_right = scene_sw_ruins.room.cam_pos[1]
-			View.limit_bottom = scene_sw_ruins.room.cam_pos[2]
-			View.limit_left = scene_sw_ruins.room.cam_pos[3]
+#			global_position = scene_sw_ruins.room.global_position
+#			#look i was going to do this cool array but honestly i cba
+#			View.limit_top = scene_sw_ruins.room.cam_pos[0]
+#			View.limit_right = scene_sw_ruins.room.cam_pos[1]
+#			View.limit_bottom = scene_sw_ruins.room.cam_pos[2]
+#			View.limit_left = scene_sw_ruins.room.cam_pos[3]
 			trans.play("transition out")
 			global.tyson_input = true
 			var timer2 : Timer = Timer.new()
@@ -85,16 +85,6 @@ func _process(_delta):
 	$TysonView.offset = Vector2(randi_range(-Globals.shake, Globals.shake), randi_range(-Globals.shake, Globals.shake))
 	
 	if Input.is_action_pressed("testTog"):
-	#	test_toggle = test_toggle + 1
-		#emit_signal("RuinsMusic")
-		#var timer : Timer = Timer.new()
-		#add_child(timer)
-		#timer.one_shot = true
-		#timer.autostart = false
-		#timer.wait_time = 2
-		#timer.timeout.connect(func(): print("idiot"))
-		#timer.start()
-		#print("you... IDIOT")
 		($"tyson-sprite" as AnimatedSprite2D).stop()
 		global.tyson_input = false
 		transition = true
@@ -196,7 +186,7 @@ func _on_ruins_a_1_to_a_2_body_shape_entered(body_rid, body, body_shape_index, l
 		timer.autostart = false
 		timer.wait_time = 0.5
 		timer.timeout.connect(func(): 
-			global_position = scene_sw_ruins.Ty_Pos_2_Enter.global_position
+			global_position = scene_sw_ruins.Ty_Pos_2_Enter.position
 			#look i was going to do this cool array but honestly i cba
 			#View.limit_top = scene_sw_ruins.ruins_2.cam_pos[0]
 			#View.limit_right = scene_sw_ruins.ruins_2.cam_pos[1]
