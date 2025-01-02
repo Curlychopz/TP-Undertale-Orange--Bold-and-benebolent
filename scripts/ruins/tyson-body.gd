@@ -44,7 +44,6 @@ func trans_representation(room):
 		timer.autostart = false
 		timer.wait_time = 0.5
 		timer.timeout.connect(func(): 
-			print(room)
 			global_position = room.marker.global_position
 #			#look i was going to do this cool array but honestly i cba
 #			View.limit_top = scene_sw_ruins.room.cam_pos[0]
@@ -77,7 +76,6 @@ func _ready():
 
 func _process(_delta):
 	interaction_system()
-	print(velocity)
 	if test_toggle > 1:
 		test_toggle = 0
 	

@@ -1,19 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dwqyuwfo6ft5f"]
+[gd_scene load_steps=4 format=3 uid="uid://dwqyuwfo6ft5f"]
 
 [ext_resource type="Script" path="res://scenes/ruins/area_1.gd" id="1_gs5ur"]
 [ext_resource type="PackedScene" uid="uid://bwoah7i746blc" path="res://Tile Sheets/tiles.tscn" id="2_85st0"]
 [ext_resource type="PackedScene" uid="uid://s8f6jlo3w1t" path="res://scenes/misc/interactable.tscn" id="3_su6lp"]
-[ext_resource type="Shader" path="res://scripts/shaders/sunray.gdshader" id="4_7vx8d"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_58d7d"]
-shader = ExtResource("4_7vx8d")
-
-[sub_resource type="Gradient" id="Gradient_vqrk2"]
-colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4xuba"]
-gradient = SubResource("Gradient_vqrk2")
-width = 500
 
 [node name="area1" type="Node2D"]
 script = ExtResource("1_gs5ur")
@@ -36,46 +25,6 @@ layer_3/tile_data = PackedInt32Array(-851964, 1310721, 5, -851963, 1310721, 5, -
 layer_4/tile_data = PackedInt32Array(1048615, 196609, 1, 1114151, 196609, 1, 1179687, 196609, 1, 1048620, 196609, 1, 1114156, 196609, 1, 1179692, 196609, 1, 1114149, 196609, 1, 1179685, 196609, 1, 1245221, 196609, 1, 1179695, 196609, 1, 1245231, 196609, 1, 1310767, 196609, 1, 1245216, 196609, 2, 1245217, 262145, 2, 1245218, 327681, 2, 1245219, 393217, 2, 1310752, 196609, 2, 1310753, 262145, 2, 1310754, 327681, 2, 1310755, 393217, 2, 1376288, 196609, 2, 1376289, 262145, 2, 1376290, 327681, 2, 1376291, 393217, 2, 1048603, 196609, 2, 1048604, 262145, 2, 1048605, 327681, 2, 1048606, 393217, 2, 1114139, 196609, 2, 1114140, 262145, 2, 1114141, 327681, 2, 1114142, 393217, 2, 1179675, 196609, 2, 1179676, 262145, 2, 1179677, 327681, 2, 1179678, 393217, 2, 1114136, 196609, 1, 1179672, 196609, 1, 1048600, 196609, 1, 1048591, 196609, 1, 1114127, 196609, 1, 1179663, 196609, 1, 1048593, 196609, 1, 1114129, 196609, 1, 1179665, 196609, 1, 1048580, 393217, 2, 1114116, 393217, 2, 1179652, 393217, 2, 1048579, 196609, 2, 1114115, 196609, 2, 1179651, 196609, 2, 2228263, 851981, 9, 2293799, 851981, 10)
 
 [node name="interactable" parent="." instance=ExtResource("3_su6lp")]
-<<<<<<< HEAD
-position = Vector2(469, 176)
-
-[node name="fx" type="Node2D" parent="."]
-
-[node name="lightray" type="Sprite2D" parent="fx"]
-material = SubResource("ShaderMaterial_58d7d")
-position = Vector2(117.296, -110)
-rotation = -1.57079
-scale = Vector2(1, 0.375)
-texture = SubResource("GradientTexture2D_4xuba")
-
-[node name="lightray6" type="Sprite2D" parent="fx"]
-material = SubResource("ShaderMaterial_58d7d")
-position = Vector2(172.4, -66.9999)
-rotation = -1.57079
-scale = Vector2(1, 0.897011)
-texture = SubResource("GradientTexture2D_4xuba")
-
-[node name="lightray8" type="Sprite2D" parent="fx"]
-material = SubResource("ShaderMaterial_58d7d")
-position = Vector2(154.4, 29.2501)
-rotation = -1.57079
-scale = Vector2(0.533, 0.2)
-texture = SubResource("GradientTexture2D_4xuba")
-
-[node name="lightray12" type="Sprite2D" parent="fx"]
-material = SubResource("ShaderMaterial_58d7d")
-position = Vector2(63.4003, -12.7499)
-rotation = -1.57079
-scale = Vector2(0.533, 0.2)
-texture = SubResource("GradientTexture2D_4xuba")
-
-[node name="lightray13" type="Sprite2D" parent="fx"]
-material = SubResource("ShaderMaterial_58d7d")
-position = Vector2(252, -15)
-rotation = -1.57079
-scale = Vector2(0.533, 0.2)
-texture = SubResource("GradientTexture2D_4xuba")
-=======
 position = Vector2(353, 16)
 
 [node name="RuinsTpPoints" type="Node" parent="."]
@@ -99,4 +48,3 @@ position = Vector2(121, 800)
 position = Vector2(43, 1016)
 
 [node name="RuinsTpBodies" type="Node" parent="."]
->>>>>>> 502cd56e1014b771518379606248abc0f99e9596

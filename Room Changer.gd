@@ -8,12 +8,11 @@ extends Area2D
 @export var id: int
 @export var to_id : int
 
+
 func _ready():
 	body_entered.connect(room_change)
 
 func room_change(body):
-	print("hiiii")
-	print(changers)
 	if body is tyson:
 		for x in changers:
 			if x.id == to_id:
