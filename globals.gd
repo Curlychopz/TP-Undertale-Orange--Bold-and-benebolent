@@ -7,6 +7,14 @@ var out_transition = false
 var song_playing = "undefined"
 var song_override = false
 var room_move = true
+
+#OverWorld Objects
+var tyson = null
+
+
+
+var changers = [] 
+
 #var TysonData = [true, 20, "Default"]
 signal Ruins1
 

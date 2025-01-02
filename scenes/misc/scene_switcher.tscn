@@ -1,26 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://56vcj874kl3i"]
+[gd_scene load_steps=13 format=3 uid="uid://56vcj874kl3i"]
 
-[ext_resource type="Script" path="res://scenes/misc/scene_switcher.gd" id="1_cyt00"]
 [ext_resource type="PackedScene" uid="uid://dwqyuwfo6ft5f" path="res://scenes/ruins/area_1.tscn" id="2_jpxis"]
+[ext_resource type="PackedScene" uid="uid://cvnjlrhk6kqp2" path="res://scenes/overworld_objects/room_changer.tscn" id="3_gxr6y"]
 [ext_resource type="PackedScene" uid="uid://cdgml71f1mhl6" path="res://Main_Characters/tyson_body.tscn" id="5_bf5ns"]
-[ext_resource type="Script" path="res://scenes/misc/Ty_Pos_2_Enter.gd" id="6_8wi5h"]
 [ext_resource type="AudioStream" uid="uid://dgbq5ayvkdtfu" path="res://sounds/PC Computer - Undertale - Sound Effects/snd_escaped.wav" id="7_lv70l"]
-[ext_resource type="Script" path="res://scenes/misc/Ty_Pos_4_Enter.gd" id="9_echfp"]
-[ext_resource type="Script" path="res://scenes/misc/Ty_Pos_3_Enter.gd" id="9_rmf8y"]
 [ext_resource type="AudioStream" uid="uid://bmmxr5d21s01n" path="res://music/Ruins/Fallen_Town.mp3" id="10_h2qn2"]
-[ext_resource type="Script" path="res://scenes/misc/Ty_Pos_5_Enter.gd" id="11_qse5v"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yiqlx"]
-size = Vector2(47, 33)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sg08u"]
+size = Vector2(41, 20.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2ws0"]
-size = Vector2(38, 18.1563)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_toac4"]
-size = Vector2(39, 15.6467)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5ncf"]
-size = Vector2(41, 28)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10irp"]
+size = Vector2(44, 13)
 
 [sub_resource type="Animation" id="Animation_28axj"]
 length = 0.001
@@ -190,65 +180,36 @@ _data = {
 }
 
 [node name="scene_switcher" type="Node"]
-script = ExtResource("1_cyt00")
 
 [node name="area1" parent="." instance=ExtResource("2_jpxis")]
 script = null
 
+[node name="Changers" type="Node2D" parent="."]
+
+[node name="Room Changer" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(620, 157)
+
+[node name="CollisionShape2D" parent="Changers/Room Changer" index="0"]
+position = Vector2(-2, -19.25)
+shape = SubResource("RectangleShape2D_sg08u")
+
+[node name="Marker2D" parent="Changers/Room Changer" index="1"]
+position = Vector2(-3, 9)
+
+[node name="Room Changer2" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(580, -10)
+id = 1
+to_id = 0
+
+[node name="CollisionShape2D" parent="Changers/Room Changer2" index="0"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_10irp")
+
+[node name="Marker2D" parent="Changers/Room Changer2" index="1"]
+position = Vector2(0, -21)
+
 [node name="tyson-body" parent="." instance=ExtResource("5_bf5ns")]
 position = Vector2(152, 134)
-
-[node name="RuinsA1toA2" type="Area2D" parent="."]
-position = Vector2(618, 136)
-
-[node name="CRA1tA2" type="CollisionShape2D" parent="RuinsA1toA2"]
-shape = SubResource("RectangleShape2D_yiqlx")
-debug_color = Color(1, 0.501961, 0.0862745, 0.564706)
-
-[node name="RuinsA2toA3" type="Area2D" parent="."]
-position = Vector2(580, -236)
-scale = Vector2(1, 1.59386)
-
-[node name="CRA2tA3" type="CollisionShape2D" parent="RuinsA2toA3"]
-position = Vector2(0, 0.627412)
-shape = SubResource("RectangleShape2D_i2ws0")
-debug_color = Color(0.760784, 0.439216, 0.294118, 0.419608)
-
-[node name="RuinsA3toA4" type="Area2D" parent="."]
-position = Vector2(118, -429)
-scale = Vector2(1, 1.59386)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RuinsA3toA4"]
-position = Vector2(2, -3.13702)
-shape = SubResource("RectangleShape2D_toac4")
-debug_color = Color(0.780392, 0.431373, 0.192157, 0.419608)
-
-[node name="RuinsA4toA5" type="Area2D" parent="."]
-position = Vector2(440, -560)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RuinsA4toA5"]
-position = Vector2(0, 6)
-shape = SubResource("RectangleShape2D_q5ncf")
-debug_color = Color(0.701961, 0.47451, 0.329412, 0.419608)
-
-[node name="Ty_Pos_1_init" type="Node2D" parent="."]
-position = Vector2(152, 136)
-
-[node name="Ty_Pos_2_Enter" type="Node2D" parent="."]
-position = Vector2(581, -21)
-script = ExtResource("6_8wi5h")
-
-[node name="Ty_Pos_3_Enter" type="Node2D" parent="."]
-position = Vector2(121, -62)
-script = ExtResource("9_rmf8y")
-
-[node name="Ty_Pos_4_Enter" type="Node2D" parent="."]
-position = Vector2(459, -361)
-script = ExtResource("9_echfp")
-
-[node name="Ty_Pos_5_Enter" type="Node2D" parent="."]
-position = Vector2(120, 512)
-script = ExtResource("11_qse5v")
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {
@@ -271,7 +232,5 @@ stream = ExtResource("7_lv70l")
 [node name="Fallen_Town" type="AudioStreamPlayer2D" parent="JukeBox"]
 stream = ExtResource("10_h2qn2")
 
-[connection signal="body_shape_entered" from="RuinsA1toA2" to="tyson-body" method="_on_ruins_a_1_to_a_2_body_shape_entered"]
-[connection signal="body_shape_entered" from="RuinsA2toA3" to="tyson-body" method="_on_ruins_a_2_to_a_3_body_shape_entered"]
-[connection signal="body_shape_entered" from="RuinsA3toA4" to="tyson-body" method="_on_ruins_a_3_to_a_4_body_shape_entered"]
-[connection signal="body_shape_entered" from="RuinsA4toA5" to="tyson-body" method="_on_ruins_a_4_to_a_5_body_shape_entered"]
+[editable path="Changers/Room Changer"]
+[editable path="Changers/Room Changer2"]

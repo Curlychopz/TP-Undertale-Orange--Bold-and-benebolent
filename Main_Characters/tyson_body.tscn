@@ -3,10 +3,6 @@
 [ext_resource type="Script" path="res://scripts/ruins/tyson-body.gd" id="1_hviyl"]
 [ext_resource type="Texture2D" uid="uid://cny78a3p7km4t" path="res://sprites/tyson/Tyson_Walking.png" id="2_hobn2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_epi2y"]
-atlas = ExtResource("2_hobn2")
-region = Rect2(0, 0, 21, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_72bev"]
 atlas = ExtResource("2_hobn2")
 region = Rect2(21, 0, 21, 32)
@@ -19,9 +15,9 @@ region = Rect2(42, 0, 21, 32)
 atlas = ExtResource("2_hobn2")
 region = Rect2(63, 0, 21, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_py5g4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_epi2y"]
 atlas = ExtResource("2_hobn2")
-region = Rect2(84, 32, 21, 32)
+region = Rect2(0, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3xarj"]
 atlas = ExtResource("2_hobn2")
@@ -35,9 +31,9 @@ region = Rect2(126, 32, 21, 32)
 atlas = ExtResource("2_hobn2")
 region = Rect2(147, 32, 21, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsbh2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_py5g4"]
 atlas = ExtResource("2_hobn2")
-region = Rect2(84, 0, 21, 32)
+region = Rect2(84, 32, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3007o"]
 atlas = ExtResource("2_hobn2")
@@ -51,9 +47,9 @@ region = Rect2(126, 0, 21, 32)
 atlas = ExtResource("2_hobn2")
 region = Rect2(147, 0, 21, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_di5ch"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsbh2"]
 atlas = ExtResource("2_hobn2")
-region = Rect2(0, 32, 21, 32)
+region = Rect2(84, 0, 21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8swv"]
 atlas = ExtResource("2_hobn2")
@@ -67,12 +63,13 @@ region = Rect2(42, 32, 21, 32)
 atlas = ExtResource("2_hobn2")
 region = Rect2(63, 32, 21, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_di5ch"]
+atlas = ExtResource("2_hobn2")
+region = Rect2(0, 32, 21, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_bwgsl"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_epi2y")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_72bev")
 }, {
@@ -81,15 +78,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d3fjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epi2y")
 }],
 "loop": true,
 "name": &"down",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_py5g4")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3xarj")
 }, {
@@ -98,15 +95,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5eub3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py5g4")
 }],
 "loop": true,
 "name": &"left",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lsbh2")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3007o")
 }, {
@@ -115,15 +112,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s5gwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsbh2")
 }],
 "loop": true,
 "name": &"right",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_di5ch")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_u8swv")
 }, {
@@ -132,6 +129,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qsgft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di5ch")
 }],
 "loop": true,
 "name": &"up",
@@ -147,7 +147,7 @@ script = ExtResource("1_hviyl")
 
 [node name="tyson-sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bwgsl")
-animation = &"down"
+animation = &"up"
 
 [node name="tyson-collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9.25)
