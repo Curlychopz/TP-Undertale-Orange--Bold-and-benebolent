@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://56vcj874kl3i"]
+[gd_scene load_steps=21 format=3 uid="uid://56vcj874kl3i"]
 
 [ext_resource type="PackedScene" uid="uid://dwqyuwfo6ft5f" path="res://scenes/ruins/area_1.tscn" id="2_jpxis"]
 [ext_resource type="PackedScene" uid="uid://cvnjlrhk6kqp2" path="res://scenes/overworld_objects/room_changer.tscn" id="3_gxr6y"]
@@ -17,6 +17,24 @@ size = Vector2(41, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msft5"]
 size = Vector2(41, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpcoq"]
+size = Vector2(33, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrfly"]
+size = Vector2(40, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82a1h"]
+size = Vector2(40, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1usy"]
+size = Vector2(39, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bthtd"]
+size = Vector2(40, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojjr5"]
+size = Vector2(40, 20)
 
 [sub_resource type="Animation" id="Animation_28axj"]
 length = 0.001
@@ -224,22 +242,93 @@ position = Vector2(0.5, -21)
 shape = SubResource("RectangleShape2D_dcqrr")
 
 [node name="Marker2D" parent="Changers/Room Changer3" index="1"]
-position = Vector2(0, 7)
+position = Vector2(2, 0)
 
 [node name="Room Changer4" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(461, -343)
+position = Vector2(120, -23)
 id = 3
 to_id = 2
 
 [node name="CollisionShape2D" parent="Changers/Room Changer4" index="0"]
-position = Vector2(-0.5, 2.5)
+position = Vector2(-1, -5)
 shape = SubResource("RectangleShape2D_msft5")
 
 [node name="Marker2D" parent="Changers/Room Changer4" index="1"]
-position = Vector2(-1, -23)
+position = Vector2(-2, -62)
+
+[node name="Room Changer5" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(121, -427)
+id = 4
+to_id = 5
+
+[node name="CollisionShape2D" parent="Changers/Room Changer5" index="0"]
+position = Vector2(-1, -12)
+shape = SubResource("RectangleShape2D_wpcoq")
+
+[node name="Marker2D" parent="Changers/Room Changer5" index="1"]
+position = Vector2(-1, 17)
+
+[node name="Room Changer6" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(464, -349)
+id = 5
+to_id = 4
+
+[node name="CollisionShape2D" parent="Changers/Room Changer6" index="0"]
+position = Vector2(-4, 9)
+shape = SubResource("RectangleShape2D_xrfly")
+
+[node name="Marker2D" parent="Changers/Room Changer6" index="1"]
+position = Vector2(-3, -24)
+
+[node name="Room Changer7" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(440, -555)
+id = 6
+to_id = 7
+
+[node name="CollisionShape2D" parent="Changers/Room Changer7" index="0"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_82a1h")
+
+[node name="Marker2D" parent="Changers/Room Changer7" index="1"]
+position = Vector2(0, 22)
+
+[node name="Room Changer8" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(119, 532)
+id = 7
+to_id = 6
+
+[node name="CollisionShape2D" parent="Changers/Room Changer8" index="0"]
+position = Vector2(2, 16)
+shape = SubResource("RectangleShape2D_v1usy")
+
+[node name="Marker2D" parent="Changers/Room Changer8" index="1"]
+position = Vector2(2, -13)
+
+[node name="Room Changer9" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(841, 367)
+id = 8
+to_id = 9
+
+[node name="CollisionShape2D" parent="Changers/Room Changer9" index="0"]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_bthtd")
+
+[node name="Marker2D" parent="Changers/Room Changer9" index="1"]
+position = Vector2(-1, 21)
+
+[node name="Room Changer10" parent="Changers" instance=ExtResource("3_gxr6y")]
+position = Vector2(120, 846)
+id = 9
+to_id = 8
+
+[node name="CollisionShape2D" parent="Changers/Room Changer10" index="0"]
+shape = SubResource("RectangleShape2D_ojjr5")
+
+[node name="Marker2D" parent="Changers/Room Changer10" index="1"]
+position = Vector2(1, -38)
 
 [node name="tyson-body" parent="." instance=ExtResource("5_bf5ns")]
-position = Vector2(152, 134)
+position = Vector2(150, 131)
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {
@@ -255,14 +344,22 @@ offset_bottom = 1154.0
 color = Color(0, 0, 0, 1)
 
 [node name="footsteps" type="AudioStreamPlayer2D" parent="Transition"]
+position = Vector2(-30, 23)
 stream = ExtResource("7_lv70l")
 
 [node name="JukeBox" type="Node" parent="."]
 
 [node name="Fallen_Town" type="AudioStreamPlayer2D" parent="JukeBox"]
+position = Vector2(-30, 15)
 stream = ExtResource("10_h2qn2")
 
 [editable path="Changers/Room Changer"]
 [editable path="Changers/Room Changer2"]
 [editable path="Changers/Room Changer3"]
 [editable path="Changers/Room Changer4"]
+[editable path="Changers/Room Changer5"]
+[editable path="Changers/Room Changer6"]
+[editable path="Changers/Room Changer7"]
+[editable path="Changers/Room Changer8"]
+[editable path="Changers/Room Changer9"]
+[editable path="Changers/Room Changer10"]
