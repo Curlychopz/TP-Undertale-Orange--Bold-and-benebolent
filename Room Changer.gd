@@ -16,4 +16,4 @@ func room_change(body):
 	if body is tyson:
 		for x in changers:
 			if x.id == to_id:
-				Globals.tyson.trans_representation(x)
+				globals.tyson.trans_representation(x)

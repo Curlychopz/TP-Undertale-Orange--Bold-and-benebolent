@@ -10,6 +10,9 @@ var room_move = true
 
 #OverWorld Objects
 var tyson = null
+var scene = null
+var display = null
+var cam = null
 
 
 
@@ -43,7 +46,7 @@ func _process(delta):
 		tyson_input = false
 		
 	# -Shake dampening-
-	Globals.shake /= 1.3
+	globals.shake /= 1.3
 	
 var dialouge_ui = preload("res://dialouge/dialouge_ui.tscn")
 

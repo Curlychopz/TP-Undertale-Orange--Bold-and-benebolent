@@ -17,7 +17,7 @@ func _ready():
 	
 	text.text = str(current_dialogue.text)
 	$node.scale = Vector2.ZERO
-	Globals.tyson_input = false
+	globals.tyson_input = false
 	
 func _physics_process(delta):
 	if not textbox_available_for_execution:
@@ -39,7 +39,7 @@ func _physics_process(delta):
 			text.visible_characters *= 2
 			cycle_text()
 	else:
-		Globals.tyson_input = true
+		globals.tyson_input = true
 		$node.scale /= 3
 		if $node.scale.length() < 0.1:
 			queue_free()

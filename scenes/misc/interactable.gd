@@ -9,13 +9,12 @@ var interact_toggle = false
 var times_interacted = 0
 
 func interact():
-	Globals
-	if Globals.tyson_input:
+	if globals.tyson_input:
 		if text_only:
-			Globals.dialouge_make(interact_text)
+			globals.dialouge_make(interact_text)
 		else:
 			interacted = true
 			interact_toggle = !interact_toggle
 			times_interacted += 1
-			Globals.shake = 55
+			globals.shake = 55
 		
