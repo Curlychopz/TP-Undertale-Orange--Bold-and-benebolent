@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://biesdp0hf0jj5"]
+
+[ext_resource type="Script" path="res://scripts/systems/dialouge/Dialouge_data.gd" id="1_dfrsc"]
+
+[node name="TestDialogue2" type="Node2D"]
+
+[node name="dig" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "i was crazy on-"
+
+[node name="dig2" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "wait i heard this before"
+
+[node name="dig3" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "was it a white room or a rubber room"
+
+[node name="dig4" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "i cant remember i think it was rubber"
+
+[node name="dig5" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "it like went i was crazy "
+
+[node name="dig6" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "once they trapped me?"
+
+[node name="dig7" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "no wait that doesnt sound right"
+
+[node name="dig8" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "was it trapped? put? oh right it was locked"
+
+[node name="dig9" type="Node" parent="."]
+script = ExtResource("1_dfrsc")
+text = "they locked me in a room a rubber room"

@@ -9,10 +9,10 @@ func _ready():
 	$boxrect.position.y += -200
 
 func _physics_process(delta):
-	Globals.battle_data.box_pos = $boxrect.position
-	Globals.battle_data.box_anchor = $boxrect/bg.global_position
+	globals.battle_data.box_pos = $boxrect.position
+	globals.battle_data.box_anchor = $boxrect/bg.global_position
 	
-	if Globals.battle_data.current_battle_state != Globals.battle_data.battle_states.INTRO:
+	if globals.battle_data.current_battle_state != globals.battle_data.battle_states.INTRO:
 		
 		$boxrect/right.position.x += (size_x - 1 - $boxrect/right.position.x) * 0.2
 		$boxrect/right.scale.y += (size_y  - $boxrect/right.scale.y) * 0.2

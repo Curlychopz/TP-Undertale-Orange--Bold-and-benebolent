@@ -1,8 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwqyuwfo6ft5f"]
+[gd_scene load_steps=15 format=3 uid="uid://dwqyuwfo6ft5f"]
 
 [ext_resource type="Script" path="res://scenes/ruins/area_1.gd" id="1_gs5ur"]
 [ext_resource type="PackedScene" uid="uid://bwoah7i746blc" path="res://Tile Sheets/tiles.tscn" id="2_85st0"]
 [ext_resource type="PackedScene" uid="uid://s8f6jlo3w1t" path="res://scenes/misc/interactable.tscn" id="3_su6lp"]
+[ext_resource type="PackedScene" uid="uid://cvnjlrhk6kqp2" path="res://scenes/overworld_objects/room_changer.tscn" id="4_n6rgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klii4"]
+size = Vector2(41, 20.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1q6v"]
+size = Vector2(44, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwf3h"]
+size = Vector2(41, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuf4f"]
+size = Vector2(41, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8ocp"]
+size = Vector2(33, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2q3x"]
+size = Vector2(40, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6m46q"]
+size = Vector2(40, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxklj"]
+size = Vector2(39, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwne2"]
+size = Vector2(40, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogpk5"]
+size = Vector2(40, 20)
 
 [node name="area1" type="Node2D"]
 script = ExtResource("1_gs5ur")
@@ -25,7 +56,126 @@ layer_3/tile_data = PackedInt32Array(-851964, 1310721, 5, -851963, 1310721, 5, -
 layer_4/tile_data = PackedInt32Array(1048615, 196609, 1, 1114151, 196609, 1, 1179687, 196609, 1, 1048620, 196609, 1, 1114156, 196609, 1, 1179692, 196609, 1, 1114149, 196609, 1, 1179685, 196609, 1, 1245221, 196609, 1, 1179695, 196609, 1, 1245231, 196609, 1, 1310767, 196609, 1, 1245216, 196609, 2, 1245217, 262145, 2, 1245218, 327681, 2, 1245219, 393217, 2, 1310752, 196609, 2, 1310753, 262145, 2, 1310754, 327681, 2, 1310755, 393217, 2, 1376288, 196609, 2, 1376289, 262145, 2, 1376290, 327681, 2, 1376291, 393217, 2, 1048603, 196609, 2, 1048604, 262145, 2, 1048605, 327681, 2, 1048606, 393217, 2, 1114139, 196609, 2, 1114140, 262145, 2, 1114141, 327681, 2, 1114142, 393217, 2, 1179675, 196609, 2, 1179676, 262145, 2, 1179677, 327681, 2, 1179678, 393217, 2, 1114136, 196609, 1, 1179672, 196609, 1, 1048600, 196609, 1, 1048591, 196609, 1, 1114127, 196609, 1, 1179663, 196609, 1, 1048593, 196609, 1, 1114129, 196609, 1, 1179665, 196609, 1, 1048580, 393217, 2, 1114116, 393217, 2, 1179652, 393217, 2, 1048579, 196609, 2, 1114115, 196609, 2, 1179651, 196609, 2, 2228263, 851981, 9, 2293799, 851981, 10)
 
 [node name="interactable" parent="." instance=ExtResource("3_su6lp")]
-position = Vector2(353, 16)
+position = Vector2(267, 131)
+
+[node name="Changers" type="Node2D" parent="."]
+
+[node name="Room Changer" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(620, 157)
+
+[node name="CollisionShape2D" parent="Changers/Room Changer" index="0"]
+position = Vector2(-2, -19.25)
+shape = SubResource("RectangleShape2D_klii4")
+
+[node name="Marker2D" parent="Changers/Room Changer" index="1"]
+position = Vector2(-3, 9)
+
+[node name="Room Changer2" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(580, -10)
+id = 1
+to_id = 0
+
+[node name="CollisionShape2D" parent="Changers/Room Changer2" index="0"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_r1q6v")
+
+[node name="Marker2D" parent="Changers/Room Changer2" index="1"]
+position = Vector2(0, -21)
+
+[node name="Room Changer3" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(579, -211)
+id = 2
+to_id = 3
+
+[node name="CollisionShape2D" parent="Changers/Room Changer3" index="0"]
+position = Vector2(0.5, -21)
+shape = SubResource("RectangleShape2D_mwf3h")
+
+[node name="Marker2D" parent="Changers/Room Changer3" index="1"]
+position = Vector2(2, 0)
+
+[node name="Room Changer4" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(120, -23)
+id = 3
+to_id = 2
+
+[node name="CollisionShape2D" parent="Changers/Room Changer4" index="0"]
+position = Vector2(-1, -5)
+shape = SubResource("RectangleShape2D_iuf4f")
+
+[node name="Marker2D" parent="Changers/Room Changer4" index="1"]
+position = Vector2(-2, -62)
+
+[node name="Room Changer5" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(121, -427)
+id = 4
+to_id = 5
+
+[node name="CollisionShape2D" parent="Changers/Room Changer5" index="0"]
+position = Vector2(-1, -12)
+shape = SubResource("RectangleShape2D_w8ocp")
+
+[node name="Marker2D" parent="Changers/Room Changer5" index="1"]
+position = Vector2(-1, 17)
+
+[node name="Room Changer6" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(464, -349)
+id = 5
+to_id = 4
+
+[node name="CollisionShape2D" parent="Changers/Room Changer6" index="0"]
+position = Vector2(-4, 9)
+shape = SubResource("RectangleShape2D_m2q3x")
+
+[node name="Marker2D" parent="Changers/Room Changer6" index="1"]
+position = Vector2(-3, -24)
+
+[node name="Room Changer7" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(440, -555)
+id = 6
+to_id = 7
+
+[node name="CollisionShape2D" parent="Changers/Room Changer7" index="0"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_6m46q")
+
+[node name="Marker2D" parent="Changers/Room Changer7" index="1"]
+position = Vector2(0, 22)
+
+[node name="Room Changer8" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(119, 532)
+id = 7
+to_id = 6
+
+[node name="CollisionShape2D" parent="Changers/Room Changer8" index="0"]
+position = Vector2(2, 16)
+shape = SubResource("RectangleShape2D_vxklj")
+
+[node name="Marker2D" parent="Changers/Room Changer8" index="1"]
+position = Vector2(2, -13)
+
+[node name="Room Changer9" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(841, 367)
+id = 8
+to_id = 9
+
+[node name="CollisionShape2D" parent="Changers/Room Changer9" index="0"]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_dwne2")
+
+[node name="Marker2D" parent="Changers/Room Changer9" index="1"]
+position = Vector2(-1, 21)
+
+[node name="Room Changer10" parent="Changers" instance=ExtResource("4_n6rgy")]
+position = Vector2(120, 846)
+id = 9
+to_id = 8
+
+[node name="CollisionShape2D" parent="Changers/Room Changer10" index="0"]
+shape = SubResource("RectangleShape2D_ogpk5")
+
+[node name="Marker2D" parent="Changers/Room Changer10" index="1"]
+position = Vector2(1, -38)
 
 [node name="RuinsTpPoints" type="Node" parent="."]
 
@@ -49,12 +199,13 @@ position = Vector2(43, 1016)
 
 [node name="RuinsTpBodies" type="Node" parent="."]
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-z_index = -10
-custom_minimum_size = Vector2(10000, 10000)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[editable path="Changers/Room Changer"]
+[editable path="Changers/Room Changer2"]
+[editable path="Changers/Room Changer3"]
+[editable path="Changers/Room Changer4"]
+[editable path="Changers/Room Changer5"]
+[editable path="Changers/Room Changer6"]
+[editable path="Changers/Room Changer7"]
+[editable path="Changers/Room Changer8"]
+[editable path="Changers/Room Changer9"]
+[editable path="Changers/Room Changer10"]

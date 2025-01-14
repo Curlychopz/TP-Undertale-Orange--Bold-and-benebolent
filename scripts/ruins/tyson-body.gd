@@ -104,7 +104,6 @@ func _process(_delta):
 			Input.get_action_strength("down") - Input.get_action_strength("up")
 		)
 		
-		print(direction)
 		update_animation_parameters(direction)
 		
 		velocity = direction * speed *tyson_speed
@@ -172,7 +171,9 @@ func interaction_system():
 		interactable_distance = INF
 		for i in interactables:
 			if global_position.distance_squared_to(i.global_position) < interactable_distance:
-				interactable_distance = global_position.distance_squared_to(i.global_position)
+				interactable_distance = global_position.distance_to(i.global_position)
 				closest_interactable = i
-				
-		closest_interactable.interact()
+		print(interactable_distance)
+		if interactable_distance <=50:
+			state.travel("idle")
+			closest_interactable.interact()

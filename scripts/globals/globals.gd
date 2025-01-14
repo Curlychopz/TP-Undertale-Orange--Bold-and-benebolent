@@ -15,6 +15,8 @@ var display = null
 var cam = null
 
 
+var displaycam = null
+
 
 var changers = [] 
 
@@ -55,6 +57,7 @@ func sfx(stream = preload("res://sounds/PC Computer - Undertale - Sound Effects/
 
 func dialouge_make(dlg_data):
 	var dialouge_ui_inst = dialouge_ui.instantiate()
+	dialouge_ui_inst.dialogue_data = dlg_data
 	add_child(dialouge_ui_inst)
 	
 	

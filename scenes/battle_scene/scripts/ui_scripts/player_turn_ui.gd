@@ -41,7 +41,7 @@ func _physics_process(delta):
 				get_parent().current_state = get_parent().ui_states.ENEMY_SELECT
 			
 			
-	if Globals.battle_data.current_battle_state != Globals.battle_data.battle_states.INTRO: 
+	if globals.battle_data.current_battle_state != globals.battle_data.battle_states.INTRO: 
 		ui_animations(delta)
 	
 

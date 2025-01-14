@@ -1,47 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://56vcj874kl3i"]
+[gd_scene load_steps=11 format=3 uid="uid://56vcj874kl3i"]
 
+[ext_resource type="Script" path="res://scenes/misc/displaycamera.gd" id="1_xok00"]
 [ext_resource type="PackedScene" uid="uid://dwqyuwfo6ft5f" path="res://scenes/ruins/area_1.tscn" id="2_jpxis"]
-[ext_resource type="PackedScene" uid="uid://cvnjlrhk6kqp2" path="res://scenes/overworld_objects/room_changer.tscn" id="3_gxr6y"]
 [ext_resource type="PackedScene" uid="uid://cdgml71f1mhl6" path="res://Main_Characters/tyson_body.tscn" id="5_bf5ns"]
 [ext_resource type="AudioStream" uid="uid://dgbq5ayvkdtfu" path="res://sounds/PC Computer - Undertale - Sound Effects/snd_escaped.wav" id="7_lv70l"]
 [ext_resource type="AudioStream" uid="uid://bmmxr5d21s01n" path="res://music/Ruins/Fallen_Town.mp3" id="10_h2qn2"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sg08u"]
-size = Vector2(41, 20.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_10irp"]
-size = Vector2(44, 13)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcqrr"]
-size = Vector2(41, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_msft5"]
-size = Vector2(41, 15)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpcoq"]
-size = Vector2(33, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrfly"]
-size = Vector2(40, 12)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_82a1h"]
-size = Vector2(40, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1usy"]
-size = Vector2(39, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bthtd"]
-size = Vector2(40, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojjr5"]
-size = Vector2(40, 20)
 
 [sub_resource type="Animation" id="Animation_28axj"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:visible")
+tracks/0/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -53,7 +23,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:color")
+tracks/1/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -65,7 +35,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Transition/footsteps:stream")
+tracks/2/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/footsteps:stream")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -77,7 +47,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Transition/footsteps:playing")
+tracks/3/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/footsteps:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -93,7 +63,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:visible")
+tracks/0/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -105,7 +75,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:color")
+tracks/1/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -121,7 +91,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:visible")
+tracks/0/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -133,7 +103,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:color")
+tracks/1/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -145,7 +115,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Transition/footsteps:stream")
+tracks/2/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/footsteps:stream")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -157,7 +127,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Transition/footsteps:playing")
+tracks/3/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/footsteps:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -173,7 +143,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:color")
+tracks/0/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -185,7 +155,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/path = NodePath("Node2D/SubViewportContainer/SubViewport/Transition/ColorRect:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -205,137 +175,34 @@ _data = {
 
 [node name="scene_switcher" type="Node"]
 
-[node name="area1" parent="." instance=ExtResource("2_jpxis")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 241)
+script = ExtResource("1_xok00")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="Node2D/SubViewportContainer"]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(640, 480)
+
+[node name="area1" parent="Node2D/SubViewportContainer/SubViewport" instance=ExtResource("2_jpxis")]
 script = null
 
-[node name="Changers" type="Node2D" parent="."]
-
-[node name="Room Changer" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(620, 157)
-
-[node name="CollisionShape2D" parent="Changers/Room Changer" index="0"]
-position = Vector2(-2, -19.25)
-shape = SubResource("RectangleShape2D_sg08u")
-
-[node name="Marker2D" parent="Changers/Room Changer" index="1"]
-position = Vector2(-3, 9)
-
-[node name="Room Changer2" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(580, -10)
-id = 1
-to_id = 0
-
-[node name="CollisionShape2D" parent="Changers/Room Changer2" index="0"]
-position = Vector2(0, 2)
-shape = SubResource("RectangleShape2D_10irp")
-
-[node name="Marker2D" parent="Changers/Room Changer2" index="1"]
-position = Vector2(0, -21)
-
-[node name="Room Changer3" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(579, -211)
-id = 2
-to_id = 3
-
-[node name="CollisionShape2D" parent="Changers/Room Changer3" index="0"]
-position = Vector2(0.5, -21)
-shape = SubResource("RectangleShape2D_dcqrr")
-
-[node name="Marker2D" parent="Changers/Room Changer3" index="1"]
-position = Vector2(2, 0)
-
-[node name="Room Changer4" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(120, -23)
-id = 3
-to_id = 2
-
-[node name="CollisionShape2D" parent="Changers/Room Changer4" index="0"]
-position = Vector2(-1, -5)
-shape = SubResource("RectangleShape2D_msft5")
-
-[node name="Marker2D" parent="Changers/Room Changer4" index="1"]
-position = Vector2(-2, -62)
-
-[node name="Room Changer5" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(121, -427)
-id = 4
-to_id = 5
-
-[node name="CollisionShape2D" parent="Changers/Room Changer5" index="0"]
-position = Vector2(-1, -12)
-shape = SubResource("RectangleShape2D_wpcoq")
-
-[node name="Marker2D" parent="Changers/Room Changer5" index="1"]
-position = Vector2(-1, 17)
-
-[node name="Room Changer6" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(464, -349)
-id = 5
-to_id = 4
-
-[node name="CollisionShape2D" parent="Changers/Room Changer6" index="0"]
-position = Vector2(-4, 9)
-shape = SubResource("RectangleShape2D_xrfly")
-
-[node name="Marker2D" parent="Changers/Room Changer6" index="1"]
-position = Vector2(-3, -24)
-
-[node name="Room Changer7" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(440, -555)
-id = 6
-to_id = 7
-
-[node name="CollisionShape2D" parent="Changers/Room Changer7" index="0"]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_82a1h")
-
-[node name="Marker2D" parent="Changers/Room Changer7" index="1"]
-position = Vector2(0, 22)
-
-[node name="Room Changer8" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(119, 532)
-id = 7
-to_id = 6
-
-[node name="CollisionShape2D" parent="Changers/Room Changer8" index="0"]
-position = Vector2(2, 16)
-shape = SubResource("RectangleShape2D_v1usy")
-
-[node name="Marker2D" parent="Changers/Room Changer8" index="1"]
-position = Vector2(2, -13)
-
-[node name="Room Changer9" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(841, 367)
-id = 8
-to_id = 9
-
-[node name="CollisionShape2D" parent="Changers/Room Changer9" index="0"]
-position = Vector2(-1, -2)
-shape = SubResource("RectangleShape2D_bthtd")
-
-[node name="Marker2D" parent="Changers/Room Changer9" index="1"]
-position = Vector2(-1, 21)
-
-[node name="Room Changer10" parent="Changers" instance=ExtResource("3_gxr6y")]
-position = Vector2(120, 846)
-id = 9
-to_id = 8
-
-[node name="CollisionShape2D" parent="Changers/Room Changer10" index="0"]
-shape = SubResource("RectangleShape2D_ojjr5")
-
-[node name="Marker2D" parent="Changers/Room Changer10" index="1"]
-position = Vector2(1, -38)
-
-[node name="tyson-body" parent="." instance=ExtResource("5_bf5ns")]
+[node name="tyson-body" parent="Node2D/SubViewportContainer/SubViewport" instance=ExtResource("5_bf5ns")]
 position = Vector2(150, 131)
 
-[node name="Transition" type="AnimationPlayer" parent="."]
+[node name="Transition" type="AnimationPlayer" parent="Node2D/SubViewportContainer/SubViewport"]
+root_node = NodePath("../../../..")
 libraries = {
 "": SubResource("AnimationLibrary_dtjoa")
 }
 
-[node name="ColorRect" type="ColorRect" parent="Transition"]
+[node name="ColorRect" type="ColorRect" parent="Node2D/SubViewportContainer/SubViewport/Transition"]
 z_index = 4
 offset_left = -1191.0
 offset_top = -1307.0
@@ -343,23 +210,12 @@ offset_right = 2323.0
 offset_bottom = 1154.0
 color = Color(0, 0, 0, 1)
 
-[node name="footsteps" type="AudioStreamPlayer2D" parent="Transition"]
+[node name="footsteps" type="AudioStreamPlayer2D" parent="Node2D/SubViewportContainer/SubViewport/Transition"]
 position = Vector2(-30, 23)
 stream = ExtResource("7_lv70l")
 
-[node name="JukeBox" type="Node" parent="."]
+[node name="JukeBox" type="Node" parent="Node2D/SubViewportContainer/SubViewport"]
 
-[node name="Fallen_Town" type="AudioStreamPlayer2D" parent="JukeBox"]
+[node name="Fallen_Town" type="AudioStreamPlayer2D" parent="Node2D/SubViewportContainer/SubViewport/JukeBox"]
 position = Vector2(-30, 15)
 stream = ExtResource("10_h2qn2")
-
-[editable path="Changers/Room Changer"]
-[editable path="Changers/Room Changer2"]
-[editable path="Changers/Room Changer3"]
-[editable path="Changers/Room Changer4"]
-[editable path="Changers/Room Changer5"]
-[editable path="Changers/Room Changer6"]
-[editable path="Changers/Room Changer7"]
-[editable path="Changers/Room Changer8"]
-[editable path="Changers/Room Changer9"]
-[editable path="Changers/Room Changer10"]

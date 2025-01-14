@@ -21,8 +21,8 @@ var attack_finish_timer = 1
 func _physics_process(delta):
 	if get_parent().current_state == get_parent().ui_states.ATTACK and not get_parent().inactive:
 		
-		Globals.battle_data.get_node("ui/player_turn_ui").position.y += 4
-		Globals.battle_data.get_node("ui/player_turn_ui").modulate -= Color.WHITE * delta * 6
+		globals.battle_data.get_node("ui/player_turn_ui").position.y += 4
+		globals.battle_data.get_node("ui/player_turn_ui").modulate -= Color.WHITE * delta * 6
 		
 		scale = scale.lerp(Vector2.ONE, delta * 10)
 		modulate = modulate.lerp(Color.WHITE,delta * 10)
@@ -64,8 +64,8 @@ func miss():
 	get_parent().current_state = get_parent().ui_states.MAIN
 
 func finish_attack():
-	Globals.battle_data.current_battle_state = Globals.battle_data.battle_states.ENEMY_ATTACK
-	Globals.battle_data.get_node("ui").current_state = Globals.battle_data.get_node("ui").ui_states.MAIN
+	globals.battle_data.current_battle_state = globals.battle_data.battle_states.ENEMY_ATTACK
+	globals.battle_data.get_node("ui").current_state = globals.battle_data.get_node("ui").ui_states.MAIN
 
 func reset():
 	attack_finish_timer = 1

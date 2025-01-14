@@ -44,7 +44,7 @@ func _ready():
 	
 func _physics_process(delta):
 	
-	Globals.battle_data = self
+	globals.battle_data = self
 	
 	misc_process()
 
@@ -57,7 +57,7 @@ func _physics_process(delta):
 func misc_process():
 	
 	# :: Shake ::
-	offset = Vector2(randf_range(-Globals.shake,Globals.shake),randf_range(-Globals.shake,Globals.shake))
+	offset = Vector2(randf_range(-globals.shake,globals.shake),randf_range(-globals.shake,globals.shake))
 	
 	if show_bg:
 		$bg.show()
