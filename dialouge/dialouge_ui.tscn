@@ -38,3 +38,11 @@ text = "[color=red]woah its red[/color][color=blue] and now its blue[/color]!"
 scroll_active = false
 autowrap_mode = 1
 shortcut_keys_enabled = false
+
+[node name="icon" type="TextureRect" parent="node/rect"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 9.0
+offset_right = 79.0
+offset_bottom = 68.0
+pivot_offset = Vector2(21.81, 20)
