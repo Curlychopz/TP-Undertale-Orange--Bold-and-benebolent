@@ -1,34 +1,43 @@
 extends Node
 
-signal transition
-@onready var TysonBody = $"tyson-body"
-@onready var R1Init = $Ty_Pos_1_init
-@onready var R2E = $Ty_Pos_2_Enter
 
-var current_room = null
+class_name Display_System
+
+signal DoneFading
+signal LoadingRoom
+
+@onready var camera = $Camera2D
+@onready var game = $game
+@onready var game_viewport := $game/SubViewportContainer/SubViewport
+@onready var trans = $game/SubViewportContainer/SubViewport/Transition
+@onready var tyson = $"game/SubViewportContainer/SubViewport/tyson-body"
+var currentscene = null
+var cameraintensity := 0.0
+var shaketime := 0.0
+var startingscene = load("res://scenes/ruins/area_1.tscn")
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	#$logo.connect("level_changed", self, "handle_level_changed")
-	#get_window().mode = Window.MODE_FULLSCREEN
-	pass
+func _ready():
+	globals.display = self
+	change_scene(startingscene, false)
 
-func handle_level_changed(current_level_name):
-	pass
+func change_scene(path : Variant, fadeout = true,enter = true) -> Node:
+	#Removes all current scenes in the display system
+	if currentscene != null:
+		currentscene.queue_free()
+	#loads new scene
+	var scene = path.instantiate()
+	currentscene = scene
+	game_viewport.add_child(scene)
+	tyson.global_position = scene.enter.global_position
+	#what if ninja got a low taper fade
+	if(fadeout):
+		trans.play("transition in")
+	await get_tree().process_frame
+	#Removes all camera shaking present
+	cameraintensity = 0.0
+	#currently unused 
+	LoadingRoom.emit()
+	return scene
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-#var scene_index_to_change = -1 # we leave it at -1 at first when we want it to stay idle.
-#var scene_switch_delay_start = 0.3
-#var scene_switch_delay_end = 0.3
-
-#func scene_switch_process(delta):
-#	if scene_index_to_change != -1:
-#		current_room.hide()
-		
-		
-		
-		
 	

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dwqyuwfo6ft5f"]
 
-[ext_resource type="Script" path="res://scenes/ruins/area_1.gd" id="1_gs5ur"]
+[ext_resource type="Script" path="res://scenes/ruins/base_area.gd" id="1_f5shr"]
 [ext_resource type="PackedScene" uid="uid://bwoah7i746blc" path="res://Tile Sheets/tiles.tscn" id="2_85st0"]
 [ext_resource type="PackedScene" uid="uid://s8f6jlo3w1t" path="res://scenes/misc/interactable.tscn" id="3_su6lp"]
 [ext_resource type="PackedScene" uid="uid://cvnjlrhk6kqp2" path="res://scenes/overworld_objects/room_changer.tscn" id="4_n6rgy"]
@@ -35,9 +35,9 @@ size = Vector2(40, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ogpk5"]
 size = Vector2(40, 20)
 
-[node name="area1" type="Node2D"]
-script = ExtResource("1_gs5ur")
-level_name = "ruins_1"
+[node name="area1" type="Node2D" node_paths=PackedStringArray("enter")]
+script = ExtResource("1_f5shr")
+enter = NodePath("enter")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -177,27 +177,8 @@ shape = SubResource("RectangleShape2D_ogpk5")
 [node name="Marker2D" parent="Changers/Room Changer10" index="1"]
 position = Vector2(1, -38)
 
-[node name="RuinsTpPoints" type="Node" parent="."]
-
-[node name="RuinsFloweyBottom" type="Node2D" parent="RuinsTpPoints"]
-position = Vector2(580, -16)
-
-[node name="RuinsEntranceBottom" type="Node2D" parent="RuinsTpPoints"]
-position = Vector2(120, -66)
-
-[node name="RuinsFirstPuzzleBottom" type="Node2D" parent="RuinsTpPoints"]
-position = Vector2(461, -366)
-
-[node name="RuinsBridgeLeft" type="Node2D" parent="RuinsTpPoints"]
-position = Vector2(119, 512)
-
-[node name="RuinsPoolLeft" type="Node2D" parent="RuinsTpPoints"]
-position = Vector2(121, 800)
-
-[node name="RuinsLongLeft" type="Node2D" parent="RuinsTpPoints"]
-position = Vector2(43, 1016)
-
-[node name="RuinsTpBodies" type="Node" parent="."]
+[node name="enter" type="Marker2D" parent="."]
+position = Vector2(150, 138)
 
 [editable path="Changers/Room Changer"]
 [editable path="Changers/Room Changer2"]

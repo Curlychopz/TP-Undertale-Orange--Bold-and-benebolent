@@ -34,9 +34,7 @@ func cutsceneInit(): #gets tyson and the globals ready for cutscenes
 	globals.in_cutscene = true
 	
 func trans_representation(room):
-	print(room)
 	if globals.tyson_input == true:
-		print(room)
 		state.travel("idle")
 		globals.tyson_input = false
 		transition = true
@@ -173,7 +171,6 @@ func interaction_system():
 			if global_position.distance_squared_to(i.global_position) < interactable_distance:
 				interactable_distance = global_position.distance_to(i.global_position)
 				closest_interactable = i
-		print(interactable_distance)
 		if interactable_distance <=50:
 			state.travel("idle")
 			closest_interactable.interact()

@@ -4,6 +4,9 @@ extends Area2D
 @onready var marker := $Marker2D
 @onready var changers = get_parent().get_children()
 
+
+@export var nodeswitch := false
+
 @export var c_name: String
 @export var id: int
 @export var to_id : int
