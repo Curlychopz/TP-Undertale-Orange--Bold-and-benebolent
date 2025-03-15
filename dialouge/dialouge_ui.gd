@@ -38,7 +38,7 @@ func _physics_process(delta):
 		if current_dialogue.text_only:
 			icon.scale/=3
 			icon.visible = false
-			text.position += (initpos - text.position) * 0.5
+			text.position += (initpos - text.position) * 0.2
 	
 		else:
 			icon.visible = true

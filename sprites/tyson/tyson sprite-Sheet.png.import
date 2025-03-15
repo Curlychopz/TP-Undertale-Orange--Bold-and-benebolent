@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd4nny1f305i5"
-path="res://.godot/imported/snasss.png-2aa1e56e95975efe077f1d1d4b9fc5b3.ctex"
+uid="uid://cjpw6h5tb0l14"
+path="res://.godot/imported/tyson sprite-Sheet.png-1fd333304bbe74b2d8c4256c277cc37b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/ruins/snasss.png"
-dest_files=["res://.godot/imported/snasss.png-2aa1e56e95975efe077f1d1d4b9fc5b3.ctex"]
+source_file="res://sprites/tyson/tyson sprite-Sheet.png"
+dest_files=["res://.godot/imported/tyson sprite-Sheet.png-1fd333304bbe74b2d8c4256c277cc37b.ctex"]
 
 [params]
 
