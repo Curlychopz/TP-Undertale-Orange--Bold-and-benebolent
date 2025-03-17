@@ -11,7 +11,10 @@ var transition = false
 @export var speed = 100
 @onready var anim_tree = $AnimationTree
 @onready var state = anim_tree.get("parameters/playback")
-
+@onready var tycamtop = $TysonView.limit_top
+@onready var tycambottom = $TysonView.limit_bottom
+@onready var tycamleft = $TysonView.limit_left
+@onready var tycamright = $TysonView.limit_right
 signal Coral1
 signal in_trans_1
 signal RuinsMusic

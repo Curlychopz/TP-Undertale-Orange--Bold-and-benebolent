@@ -1,4 +1,4 @@
-extends Node2D
+xtends Node2D
 
 var cam_pos = [-370, 700, 0, 425]
 

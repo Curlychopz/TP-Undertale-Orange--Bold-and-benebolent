@@ -198,6 +198,12 @@ render_target_update_mode = 4
 [node name="tyson-body" parent="game/SubViewportContainer/SubViewport" instance=ExtResource("5_bf5ns")]
 position = Vector2(150, 131)
 
+[node name="TysonView" parent="game/SubViewportContainer/SubViewport/tyson-body" index="2"]
+limit_left = 0
+limit_top = 0
+limit_right = 500
+limit_bottom = 0
+
 [node name="Transition" type="AnimationPlayer" parent="game/SubViewportContainer/SubViewport"]
 root_node = NodePath("../../../..")
 libraries = {
@@ -221,3 +227,5 @@ stream = ExtResource("7_lv70l")
 [node name="Fallen_Town" type="AudioStreamPlayer2D" parent="game/SubViewportContainer/SubViewport/JukeBox"]
 position = Vector2(-30, 15)
 stream = ExtResource("10_h2qn2")
+
+[editable path="game/SubViewportContainer/SubViewport/tyson-body"]
