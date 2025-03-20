@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cep5t4plltnlr"]
 
-[ext_resource type="Script" path="res://scenes/misc/typewriter.gd" id="1_uoqmk"]
+[ext_resource type="Script" uid="uid://cwar21pe7nk26" path="res://scenes/misc/typewriter.gd" id="1_uoqmk"]
 
 [node name="typewriter" type="Node"]
 script = ExtResource("1_uoqmk")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://i0gkxmps7tga"]
 
-[ext_resource type="Script" path="res://scenes/overworld_menu/overworld_menu.gd" id="1_cxoq3"]
-[ext_resource type="FontFile" uid="uid://b8r8hwdgrlm6b" path="res://sprites/8bitoperator.ttf" id="2_hk7xy"]
-[ext_resource type="Texture2D" uid="uid://d0vlksajk35r6" path="res://sprites/misc/soul.png" id="3_06t2t"]
+[ext_resource type="Script" uid="uid://bwvo6uaro22lw" path="res://scenes/overworld_menu/overworld_menu.gd" id="1_cxoq3"]
+[ext_resource type="FontFile" uid="uid://crkh8wu4rtbad" path="res://sprites/8bitoperator.ttf" id="2_hk7xy"]
+[ext_resource type="Texture2D" uid="uid://bq6bf4xceoll0" path="res://sprites/misc/soul.png" id="3_06t2t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_av7n7"]
 line_spacing = 4.0

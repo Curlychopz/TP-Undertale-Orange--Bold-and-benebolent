@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b5yi4jwxmynrh"]
 
-[ext_resource type="Script" path="res://scripts/systems/dialouge/Dialouge_data.gd" id="1_lsq4q"]
+[ext_resource type="Script" uid="uid://d2mmxkqwopnev" path="res://scripts/systems/dialouge/Dialouge_data.gd" id="1_lsq4q"]
 
 [node name="Dialouge_pack" type="Node2D"]
 

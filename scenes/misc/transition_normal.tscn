@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bay7v1fmt8sx4"]
 
-[ext_resource type="Script" path="res://scenes/misc/transition_normal.gd" id="1_aqjhq"]
+[ext_resource type="Script" uid="uid://b365acvwuh86p" path="res://scenes/misc/transition_normal.gd" id="1_aqjhq"]
 [ext_resource type="PackedScene" uid="uid://mu5kgrba01d8" path="res://Main_Characters/trans_anim.tscn" id="2_yhwer"]
 
 [node name="transition_room" type="Node2D"]

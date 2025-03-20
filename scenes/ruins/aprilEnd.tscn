@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://hygc758k434f" path="res://music/Ruins/spr_logo2.png" id="1_m3a53"]
 [ext_resource type="AudioStream" uid="uid://dklrtr6ubtjax" path="res://music/menu/Bold_and_Benevolent_Perfected.mp3" id="2_1hqa0"]
-[ext_resource type="Script" path="res://scenes/ruins/BnBPerf.gd" id="3_h2nvd"]
+[ext_resource type="Script" uid="uid://bcrtdxwco2mmy" path="res://scenes/ruins/BnBPerf.gd" id="3_h2nvd"]
 [ext_resource type="Texture2D" uid="uid://db8as36f1o0o" path="res://sprites/coral/UT_PAPAYA_ORANGE_CORAL_sheet.png" id="4_omfiw"]
 [ext_resource type="Texture2D" uid="uid://nmbjy8npeum8" path="res://sprites/april2024/Screenshot_20240318_221700.jpg" id="5_56cnr"]
 
@@ -98,8 +98,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hbcc4"]
 _data = {
-"Coral spin": SubResource("Animation_lhqvq"),
-"RESET": SubResource("Animation_r27kr")
+&"Coral spin": SubResource("Animation_lhqvq"),
+&"RESET": SubResource("Animation_r27kr")
 }
 
 [node name="Node2D" type="Node2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtciygr6c3m3x"]
 
-[ext_resource type="Script" path="res://scenes/battle_enemy/script/enemy_class.gd" id="1_tbckb"]
+[ext_resource type="Script" uid="uid://cr2gk0cykoinw" path="res://scenes/battle_enemy/script/enemy_class.gd" id="1_tbckb"]
 [ext_resource type="Texture2D" uid="uid://btr8bjx6v0sxn" path="res://sprites/misc/asdjasjdlajsahdds.png" id="2_toqmg"]
 
 [node name="test_enemy" type="Node2D"]

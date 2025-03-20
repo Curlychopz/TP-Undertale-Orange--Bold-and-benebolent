@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://dwqyuwfo6ft5f"]
 
-[ext_resource type="Script" path="res://scenes/ruins/base_area.gd" id="1_f5shr"]
+[ext_resource type="Script" uid="uid://bjh6a5oynglp1" path="res://scenes/ruins/base_area.gd" id="1_f5shr"]
 [ext_resource type="PackedScene" uid="uid://bwoah7i746blc" path="res://Tile Sheets/tiles.tscn" id="2_85st0"]
 [ext_resource type="PackedScene" uid="uid://s8f6jlo3w1t" path="res://scenes/misc/interactable.tscn" id="3_su6lp"]
 [ext_resource type="PackedScene" uid="uid://cvnjlrhk6kqp2" path="res://scenes/overworld_objects/room_changer.tscn" id="4_n6rgy"]

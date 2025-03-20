@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://blgtdqmpxjsyo"]
 
-[ext_resource type="Script" path="res://scenes/battle_scene/scripts/soul.gd" id="1_fiswn"]
+[ext_resource type="Script" uid="uid://ccixjruav3lwc" path="res://scenes/battle_scene/scripts/soul.gd" id="1_fiswn"]
 [ext_resource type="Texture2D" uid="uid://bq6bf4xceoll0" path="res://sprites/misc/soul.png" id="2_y0abs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvsm7"]

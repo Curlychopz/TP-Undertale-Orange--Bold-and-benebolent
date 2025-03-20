@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://56vcj874kl3i"]
 
-[ext_resource type="Script" path="res://scenes/misc/scene_switcher.gd" id="1_ege6u"]
-[ext_resource type="Script" path="res://scenes/misc/displaycamera.gd" id="1_xok00"]
+[ext_resource type="Script" uid="uid://cn0fl1tlklfi2" path="res://scenes/misc/scene_switcher.gd" id="1_ege6u"]
+[ext_resource type="Script" uid="uid://pwesw0u620wy" path="res://scenes/misc/displaycamera.gd" id="1_xok00"]
 [ext_resource type="PackedScene" uid="uid://dwqyuwfo6ft5f" path="res://scenes/ruins/area_1.tscn" id="2_jpxis"]
 [ext_resource type="PackedScene" uid="uid://cdgml71f1mhl6" path="res://Main_Characters/tyson_body.tscn" id="5_bf5ns"]
 [ext_resource type="AudioStream" uid="uid://dgbq5ayvkdtfu" path="res://sounds/PC Computer - Undertale - Sound Effects/snd_escaped.wav" id="7_lv70l"]
@@ -168,10 +168,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dtjoa"]
 _data = {
-"RESET": SubResource("Animation_28axj"),
-"blank": SubResource("Animation_6gdaq"),
-"transition in": SubResource("Animation_k05dw"),
-"transition out": SubResource("Animation_1n04h")
+&"RESET": SubResource("Animation_28axj"),
+&"blank": SubResource("Animation_6gdaq"),
+&"transition in": SubResource("Animation_k05dw"),
+&"transition out": SubResource("Animation_1n04h")
 }
 
 [node name="scene_switcher" type="Node"]
@@ -207,7 +207,7 @@ limit_bottom = 0
 [node name="Transition" type="AnimationPlayer" parent="game/SubViewportContainer/SubViewport"]
 root_node = NodePath("../../../..")
 libraries = {
-"": SubResource("AnimationLibrary_dtjoa")
+&"": SubResource("AnimationLibrary_dtjoa")
 }
 
 [node name="ColorRect" type="ColorRect" parent="game/SubViewportContainer/SubViewport/Transition"]

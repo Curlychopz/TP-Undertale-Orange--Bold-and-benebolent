@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://cdgml71f1mhl6"]
 
-[ext_resource type="Script" path="res://scripts/ruins/tyson-body.gd" id="1_hviyl"]
+[ext_resource type="Script" uid="uid://bayinol1k3ul1" path="res://scripts/ruins/tyson-body.gd" id="1_hviyl"]
 [ext_resource type="Texture2D" uid="uid://cjpw6h5tb0l14" path="res://sprites/tyson/tyson sprite-Sheet.png" id="2_wbxpq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nphk1"]
@@ -167,15 +167,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pvd0u"]
 _data = {
-"RESET": SubResource("Animation_jmy5p"),
-"idle_down": SubResource("Animation_wxft5"),
-"idle_left": SubResource("Animation_ymjjd"),
-"idle_right": SubResource("Animation_mupua"),
-"idle_up": SubResource("Animation_jmnrw"),
-"walk_down": SubResource("Animation_epa6i"),
-"walk_left": SubResource("Animation_636aw"),
-"walk_right": SubResource("Animation_xssr6"),
-"walk_up": SubResource("Animation_0nvu8")
+&"RESET": SubResource("Animation_jmy5p"),
+&"idle_down": SubResource("Animation_wxft5"),
+&"idle_left": SubResource("Animation_ymjjd"),
+&"idle_right": SubResource("Animation_mupua"),
+&"idle_up": SubResource("Animation_jmnrw"),
+&"walk_down": SubResource("Animation_epa6i"),
+&"walk_left": SubResource("Animation_636aw"),
+&"walk_right": SubResource("Animation_xssr6"),
+&"walk_up": SubResource("Animation_0nvu8")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lkaua"]

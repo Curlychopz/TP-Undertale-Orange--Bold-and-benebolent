@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://mu5kgrba01d8"]
 
-[ext_resource type="Script" path="res://scenes/misc/trans_anim.gd" id="1_wvx5h"]
+[ext_resource type="Script" uid="uid://di23nbm1e32ba" path="res://scenes/misc/trans_anim.gd" id="1_wvx5h"]
 [ext_resource type="AudioStream" uid="uid://dgbq5ayvkdtfu" path="res://sounds/PC Computer - Undertale - Sound Effects/snd_escaped.wav" id="2_55env"]
 
 [sub_resource type="Animation" id="Animation_pb45d"]
@@ -85,9 +85,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_am2ah"]
 _data = {
-"RESET": SubResource("Animation_pb45d"),
-"transition": SubResource("Animation_qumwb"),
-"transition_2": SubResource("Animation_jo2rk")
+&"RESET": SubResource("Animation_pb45d"),
+&"transition": SubResource("Animation_qumwb"),
+&"transition_2": SubResource("Animation_jo2rk")
 }
 
 [node name="trans_anim" type="AnimationPlayer"]

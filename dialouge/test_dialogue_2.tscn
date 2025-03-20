@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://biesdp0hf0jj5"]
 
-[ext_resource type="Script" path="res://scripts/systems/dialouge/Dialouge_data.gd" id="1_dfrsc"]
+[ext_resource type="Script" uid="uid://d2mmxkqwopnev" path="res://scripts/systems/dialouge/Dialouge_data.gd" id="1_dfrsc"]
 [ext_resource type="Texture2D" uid="uid://bd4nny1f305i5" path="res://scenes/battle_scene/snasss.png" id="2_4xi5p"]
 
 [node name="TestDialogue2" type="Node2D"]
