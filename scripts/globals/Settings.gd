@@ -52,6 +52,5 @@ func start() -> void:
 	get_viewport().size = Vector2(640,480)
 
 func _process(delta):
-	print("hiiii")
 	if Input.is_action_just_pressed("fullscreen") && !Input.is_action_just_pressed("alt"):
 		toggle_resolution()
