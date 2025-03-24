@@ -412,7 +412,7 @@ scale = Vector2(-0.87382, 0.309285)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_1xlu2")
+&"": SubResource("AnimationLibrary_1xlu2")
 }
 autoplay = "new_animation"
 

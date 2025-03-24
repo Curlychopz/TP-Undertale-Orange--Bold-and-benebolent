@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bnyt82vfl1ofn" path="res://Room Changer.gd" id="1_3bmb5"]
 
-[node name="Room Changer" type="Area2D"]
+[node name="Room Changer" type="Area2D" groups=["chanegrs"]]
 script = ExtResource("1_3bmb5")
 to_id = 1
 
