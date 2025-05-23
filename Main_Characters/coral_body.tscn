@@ -1,22 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bt4j34cnqixy6"]
+[gd_scene load_steps=12 format=3 uid="uid://bt4j34cnqixy6"]
 
 [ext_resource type="Texture2D" uid="uid://db8as36f1o0o" path="res://sprites/coral/UT_PAPAYA_ORANGE_CORAL_sheet.png" id="1_gv64i"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gwgps"]
-atlas = ExtResource("1_gv64i")
-region = Rect2(4, 6, 21, 31)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_orgi6"]
-atlas = ExtResource("1_gv64i")
-region = Rect2(27, 6, 21, 31)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_txvw4"]
-atlas = ExtResource("1_gv64i")
-region = Rect2(50, 6, 21, 31)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_av8mk"]
-atlas = ExtResource("1_gv64i")
-region = Rect2(73, 6, 21, 31)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6rkn4"]
 atlas = ExtResource("1_gv64i")
@@ -52,19 +36,7 @@ region = Rect2(74, 73, 20, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a3a60"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gwgps")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_orgi6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_txvw4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_av8mk")
-}],
+"frames": [],
 "loop": true,
 "name": &"down",
 "speed": 5.0
@@ -109,9 +81,16 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwg5k"]
+size = Vector2(18, 12)
+
 [node name="coral_body" type="CharacterBody2D"]
 
 [node name="coral_sprite" type="AnimatedSprite2D" parent="."]
-visible = false
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_a3a60")
 animation = &"down"
+
+[node name="Coral Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_hwg5k")
