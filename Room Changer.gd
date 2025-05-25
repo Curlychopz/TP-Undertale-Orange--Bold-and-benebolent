@@ -10,6 +10,7 @@ extends Area2D
 @export var c_name: String
 @export var id: int
 @export var to_id : int
+@onready var spawn = $Marker2D
 
 @export var camtop: int
 @export var cambottom: int
@@ -22,7 +23,7 @@ func _ready():
 
 func room_change(body):
 	if body is tyson:
-		for x in changers:
+		for x in get_tree().get_nodes_in_group("chanegrs"):
 			if x.id == to_id:
 				globals.tyson.trans_representation(x)
 				globals.tyson.tycambottom = cambottom

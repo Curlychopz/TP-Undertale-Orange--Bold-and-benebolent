@@ -129,83 +129,90 @@ position = Vector2(267, 131)
 
 [node name="Changers" type="Node2D" parent="."]
 
-[node name="Room Changer" parent="Changers" instance=ExtResource("4_n6rgy")]
+[node name="fall_room" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(620, 157)
+c_name = "fall_room"
 cambottom = 250
 camright = 675
 
-[node name="CollisionShape2D" parent="Changers/Room Changer" index="0"]
+[node name="CollisionShape2D" parent="Changers/fall_room" index="0"]
 position = Vector2(-2, -19.25)
 shape = SubResource("RectangleShape2D_klii4")
 
-[node name="Marker2D" parent="Changers/Room Changer" index="1"]
+[node name="Marker2D" parent="Changers/fall_room" index="1"]
 position = Vector2(-3, 9)
 
-[node name="Room Changer2" parent="Changers" instance=ExtResource("4_n6rgy")]
+[node name="flowey_fall_room" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(580, -10)
+c_name = "flowey_fall_room"
 id = 1
 to_id = 0
 camtop = 325
 camleft = 450
 camright = 675
 
-[node name="CollisionShape2D" parent="Changers/Room Changer2" index="0"]
+[node name="CollisionShape2D" parent="Changers/flowey_fall_room" index="0"]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_r1q6v")
 
-[node name="Marker2D" parent="Changers/Room Changer2" index="1"]
+[node name="Marker2D" parent="Changers/flowey_fall_room" index="1"]
 position = Vector2(0, -21)
 
-[node name="Room Changer3" parent="Changers" instance=ExtResource("4_n6rgy")]
+[node name="flowey_ruins1" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(579, -211)
+c_name = "flowey_ruins1"
 id = 2
 to_id = 3
 
-[node name="CollisionShape2D" parent="Changers/Room Changer3" index="0"]
+[node name="CollisionShape2D" parent="Changers/flowey_ruins1" index="0"]
 position = Vector2(0.5, -21)
 shape = SubResource("RectangleShape2D_mwf3h")
 
-[node name="Marker2D" parent="Changers/Room Changer3" index="1"]
+[node name="Marker2D" parent="Changers/flowey_ruins1" index="1"]
 position = Vector2(2, 0)
 
-[node name="Room Changer4" parent="Changers" instance=ExtResource("4_n6rgy")]
+[node name="ruins1_flowey" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(120, -23)
+c_name = "ruins1_flowey"
 id = 3
 to_id = 2
 
-[node name="CollisionShape2D" parent="Changers/Room Changer4" index="0"]
+[node name="CollisionShape2D" parent="Changers/ruins1_flowey" index="0"]
 position = Vector2(-1, -5)
 shape = SubResource("RectangleShape2D_iuf4f")
 
-[node name="Marker2D" parent="Changers/Room Changer4" index="1"]
+[node name="Marker2D" parent="Changers/ruins1_flowey" index="1"]
 position = Vector2(-2, -62)
 
-[node name="Room Changer5" parent="Changers" instance=ExtResource("4_n6rgy")]
+[node name="ruins1_ruins2" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(121, -427)
+c_name = "ruins1_ruins2"
 id = 4
 to_id = 5
 
-[node name="CollisionShape2D" parent="Changers/Room Changer5" index="0"]
+[node name="CollisionShape2D" parent="Changers/ruins1_ruins2" index="0"]
 position = Vector2(-1, -12)
 shape = SubResource("RectangleShape2D_w8ocp")
 
-[node name="Marker2D" parent="Changers/Room Changer5" index="1"]
+[node name="Marker2D" parent="Changers/ruins1_ruins2" index="1"]
 position = Vector2(-1, 17)
 
-[node name="Room Changer6" parent="Changers" instance=ExtResource("4_n6rgy")]
+[node name="ruins2_ruins1" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(464, -349)
+c_name = "ruins2_ruins1"
 id = 5
 to_id = 4
 
-[node name="CollisionShape2D" parent="Changers/Room Changer6" index="0"]
+[node name="CollisionShape2D" parent="Changers/ruins2_ruins1" index="0"]
 position = Vector2(-4, 9)
 shape = SubResource("RectangleShape2D_m2q3x")
 
-[node name="Marker2D" parent="Changers/Room Changer6" index="1"]
+[node name="Marker2D" parent="Changers/ruins2_ruins1" index="1"]
 position = Vector2(-3, -24)
 
 [node name="Room Changer7" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(440, -555)
+c_name = "ruiins2_ruins3"
 id = 6
 to_id = 7
 
@@ -218,6 +225,7 @@ position = Vector2(0, 22)
 
 [node name="Room Changer8" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(119, 532)
+c_name = "ruins3_ruins2"
 id = 7
 to_id = 6
 
@@ -230,6 +238,7 @@ position = Vector2(2, -13)
 
 [node name="Room Changer9" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(841, 367)
+c_name = "ruins3_ruins4"
 id = 8
 to_id = 9
 
@@ -242,6 +251,7 @@ position = Vector2(-1, 21)
 
 [node name="Room Changer10" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(120, 846)
+c_name = "ruins4_ruins3"
 id = 9
 to_id = 8
 
@@ -254,6 +264,7 @@ position = Vector2(1, -38)
 
 [node name="Room Changer11" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(1073, 714)
+c_name = "ruins4_ruins5"
 id = 10
 to_id = 11
 
@@ -266,6 +277,7 @@ position = Vector2(-40, 6)
 
 [node name="Room Changer12" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(7, 1020)
+c_name = "ruins5_ruins4"
 id = 11
 to_id = 10
 
@@ -278,6 +290,7 @@ position = Vector2(31, -1)
 
 [node name="Room Changer13" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(1130, 1017)
+c_name = "ruins5_ruins6"
 id = 12
 to_id = 13
 
@@ -290,6 +303,7 @@ position = Vector2(-44, -1)
 
 [node name="Room Changer14" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(744, -45)
+c_name = "ruins6_ruins5"
 id = 13
 to_id = 12
 
@@ -302,6 +316,7 @@ position = Vector2(26, 4)
 
 [node name="Room Changer15" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(941, -93)
+c_name = "ruins6_ruins7"
 id = 14
 to_id = 15
 
@@ -314,6 +329,7 @@ position = Vector2(0, 26)
 
 [node name="Room Changer16" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(943, -166)
+c_name = "ruins7_ruins6"
 id = 15
 to_id = 14
 
@@ -326,6 +342,7 @@ position = Vector2(-2, -30)
 
 [node name="Room Changer17" parent="Changers" instance=ExtResource("4_n6rgy")]
 position = Vector2(940, -373)
+c_name = "ruins7_oldruins1"
 id = 16
 to_id = 17
 
@@ -339,12 +356,12 @@ position = Vector2(0, 18)
 [node name="enter" type="Marker2D" parent="."]
 position = Vector2(150, 138)
 
-[editable path="Changers/Room Changer"]
-[editable path="Changers/Room Changer2"]
-[editable path="Changers/Room Changer3"]
-[editable path="Changers/Room Changer4"]
-[editable path="Changers/Room Changer5"]
-[editable path="Changers/Room Changer6"]
+[editable path="Changers/fall_room"]
+[editable path="Changers/flowey_fall_room"]
+[editable path="Changers/flowey_ruins1"]
+[editable path="Changers/ruins1_flowey"]
+[editable path="Changers/ruins1_ruins2"]
+[editable path="Changers/ruins2_ruins1"]
 [editable path="Changers/Room Changer7"]
 [editable path="Changers/Room Changer8"]
 [editable path="Changers/Room Changer9"]
