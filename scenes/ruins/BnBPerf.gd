@@ -10,16 +10,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if global.song_playing == "BnB" && global.song_override == false && song_on == false:
-		playing = true
-		autoplay = true
-		song_on = true
-		
-		if global.song_playing != "BnB":
-			song_on = false
-			playing = false
-			autoplay = false
-
+	#if global.song_playing == "BnB" && global.song_override == false && song_on == false:
+		#playing = true
+		#autoplay = true
+		#song_on = true
+		#
+		#if global.song_playing != "BnB":
+			#song_on = false
+			#playing = false
+			#autoplay = false
+	pass
 
 #func _on_tysonbody_ruins_music():
 	#print("working")
