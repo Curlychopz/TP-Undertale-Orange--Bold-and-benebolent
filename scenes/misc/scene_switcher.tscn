@@ -183,6 +183,7 @@ position = Vector2(320, 241)
 script = ExtResource("1_xok00")
 
 [node name="CanvasLayer" parent="Camera2D" instance=ExtResource("3_08mbu")]
+visible = false
 
 [node name="game" type="Node2D" parent="."]
 
