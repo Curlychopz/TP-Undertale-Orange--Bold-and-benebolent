@@ -125,7 +125,7 @@ sprite_frames = SubResource("SpriteFrames_tofa8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_hbcc4")
+&"": SubResource("AnimationLibrary_hbcc4")
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
